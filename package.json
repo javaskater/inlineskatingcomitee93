@@ -1,0 +1,44 @@
+{
+  "name": "inlineskatingcomitee93",
+  "version": "0.0.1",
+  "description": "Bootstrap 4 / SASS Theme for a Roller Comitee",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grunt": "nodejs node_modules/grunt_cli/bin/grunt",
+    "http": "nodejs node_modules/http-server/bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javaskater/inlineskatingcomitee93.git"
+  },
+  "keywords": [
+    "roller",
+    "Bootstrap4",
+    "SASS",
+    "Starter",
+    "Theme"
+  ],
+  "author": "JPMena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javaskater/inlineskatingcomitee93/issues"
+  },
+  "homepage": "https://github.com/javaskater/inlineskatingcomitee93#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "http-server": "^0.10.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1"
+  },
+  "bundleDependencies": [
+    "bootstrap",
+    "jquery",
+    "font-awesome"
+  ]
+}
