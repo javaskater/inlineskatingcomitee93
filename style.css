@@ -13,8 +13,28 @@ TEMPLATE: wp-bootstrap-starter
 
 header#masthead {
   margin-bottom: 0;
-  background-color: #2628bd ;
+  background-color: #43f8cb; ;
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
   padding: .74rem 1rem;
   border-bottom: 1px solid #5c12ca ;
+}
+
+footer#colophon {
+  color: #5c5c5c;
+  background-color: #43f8cb;;
+  font-size: 85%;
+}
+
+#masthead .navbar-nav > li > a {
+    color: #5c5c5c;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+.navbar-brand > a {
+    color: #5c5c5c;
+    font-size: 1.1rem;
+    outline: medium none;
+    text-decoration: none;
+    font-weight: 700;
 }
