@@ -20,3 +20,12 @@
  * I don't want to write css from scratch 
  * I also wanted to use an analogous [SASS](http://sass-lang.com/) [Grunt](https://gruntjs.com/) tooling
    * Analogeous to the put into place for [My Personal Portal](https://github.com/javaskater/personal_portal) 
+ * For installing the nodejs and compiling SASS to css see: [Node.js page](docs/NODE.md)
+
+ ## maintain a list of issues:
+
+* create a .gitignore ...
+* The menu / Burger does not appear clearly when using one's mobile
+* I don't know how to make logos disappear when entering mobile mode
+* The purple font on the banner is not OK ...
+  * Can I change the banner for a Bootstrap 4 accordion or [an OWL Carousel](https://github.com/mikaelmeulle/owl)
