@@ -7,7 +7,8 @@
 * I wanted to create a theme based on the [latest version of Bootstrap](https://getbootstrap.com/)
   * actually [Bootstrap4 Beta2](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 * I didn't want to start it from scratch
-  * So I searched for a starter Theme
+  * So I searched for a starter Themejpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/scripts/dev$ source ~/.bashrc && nvm use --delete-prefix 8.9.3
+Now using node v8.9.3 (npm v5.5.1)
 * https://fr.wordpress.org/themes/wp-bootstrap-starter/ seems to be well rated !!!
 
 ### making it as professional as possible
