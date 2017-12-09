@@ -134,4 +134,37 @@ jpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/scri
 Now using node v8.9.3 (npm v5.5.1)
 ```
 
-* [nvm](https://github.com/creationix/nvm) est pour Node ce que le [virtualenv](https://github.com/pypa/virtualenv) est à Python
+* [nvm](https://github.com/creationix/nvm) is to Nodejs what [virtualenv](https://github.com/pypa/virtualenv) is to Python
+
+### [nvm](https://github.com/creationix/nvm) usage 
+
+```bash
+# which node versions are actually available through the Node Virtual Manager ?
+## type "nvm help" if you want the list of available commands !
+jpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ nvm ls
+->       v8.9.3
+         system
+default -> 8.9.3 (-> v8.9.3)
+node -> stable (-> v8.9.3) (default)
+stable -> 8.9 (-> v8.9.3) (default)
+iojs -> N/A (default)
+lts/* -> lts/carbon (-> v8.9.3)
+lts/argon -> v4.8.7 (-> N/A)
+lts/boron -> v6.12.2 (-> N/A)
+lts/carbon -> v8.9.3
+# I decide to use the default version
+jpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ nvm use default 
+Now using node v8.9.3 (npm v5.5.1)
+## I confirm the npm version ...
+jpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ npm --version
+5.5.1
+## But also the node version (the nodejs version is only the one of the apt package) 
+jpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ node --version
+v8.9.3
+```
+
+## Utiliser Bootstrap avec SASS:
+
+* Un bon tutoriel est [Ce Blog](https://makina-corpus.com/blog/metier/2015/utiliser-bootstrap-avec-un-pre-processeur)
+* A good [free video tutorial](https://coursetro.com/posts/design/73/How-to-Customize-Bootstrap-4-with-Sass)
+  * it explains also that default variables _!default_ exist only if not redefined !!!

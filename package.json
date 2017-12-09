@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "Bootstrap 4 / SASS Theme for a Roller Comitee",
   "main": "index.js",
+  "engines": {
+    "node": "8.9.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-tools": "npm install --force",
+    "uninstall-tools": "rm -r node_modules;",
     "grunt": "nodejs node_modules/grunt_cli/bin/grunt",
     "http": "nodejs node_modules/http-server/bin/http-server"
   },
@@ -13,7 +17,7 @@
     "url": "git+https://github.com/javaskater/inlineskatingcomitee93.git"
   },
   "keywords": [
-    "roller",
+    "InLineSkating",
     "Bootstrap4",
     "SASS",
     "Starter",
