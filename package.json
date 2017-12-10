@@ -9,8 +9,8 @@
   "scripts": {
     "install-tools": "npm install --force",
     "uninstall-tools": "rm -r node_modules;",
-    "grunt": "nodejs node_modules/grunt_cli/bin/grunt",
-    "http": "nodejs node_modules/http-server/bin/http-server"
+    "grunt": "node node_modules/grunt-cli/bin/grunt",
+    "http": "node node_modules/http-server/bin/http-server"
   },
   "repository": {
     "type": "git",
@@ -30,9 +30,12 @@
   },
   "homepage": "https://github.com/javaskater/inlineskatingcomitee93#readme",
   "devDependencies": {
+    "autoprefixer": "^7.2.2",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.9.0",
     "http-server": "^0.10.0"
   },
   "dependencies": {

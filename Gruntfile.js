@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                     },
                     files: { // Dictionary of files
                           // 'destination': 'source' 
-                        'css/bootstrap-compile.css': 'bower_components/bootstrap/scss/bootstrap.scss', 
+                        'css/bootstrap-compile.css': 'node_modules/bootstrap/scss/bootstrap.scss', 
                         'css/styles.css': 'scss/styles.scss'
                     }
                 },
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
                  },
                  files: { // Dictionary of files
                           // 'destination': 'source'
-                    'css/styles.css': 'scss/styles.scss'
+                    "css/styles.css" : "scss/styles.scss"
                 }
             }
         },
@@ -72,5 +72,5 @@ module.exports = function(grunt) {
     grunt.registerTask('prefix',['postcss:dist']);
     grunt.registerTask('compile',['sass:dist']);
     grunt.registerTask('package',['sass:prod_dist']);
-    //grunt.registerTask('default',['watch']);
+    grunt.registerTask('default',['watch']);
 };

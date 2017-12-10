@@ -1,0 +1,15 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+//
+// Color system
+//
+
+$navbar-light-color:                rgba($black,.5);
+$navbar-light-hover-color:          rgba($black,.7);
+$navbar-light-active-color:         rgba($black,.9);
+$navbar-light-disabled-color:       rgba($black,.3);
+$navbar-light-toggler-border-color: rgba($black,.1);

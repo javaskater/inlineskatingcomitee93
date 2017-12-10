@@ -163,8 +163,75 @@ jpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ nod
 v8.9.3
 ```
 
-## Utiliser Bootstrap avec SASS:
+## Using Bootstrap with SASS:
 
-* Un bon tutoriel est [Ce Blog](https://makina-corpus.com/blog/metier/2015/utiliser-bootstrap-avec-un-pre-processeur)
+* [This french Blog](https://makina-corpus.com/blog/metier/2015/utiliser-bootstrap-avec-un-pre-processeur) seems to be a good tutorial
 * A good [free video tutorial](https://coursetro.com/posts/design/73/How-to-Customize-Bootstrap-4-with-Sass)
   * it explains also that default variables _!default_ exist only if not redefined !!!
+
+### Adapting styles.scss
+
+```bash
+jpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ npm run grunt
+
+> inlineskatingcomitee93@0.0.1 grunt /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93
+> node node_modules/grunt-cli/bin/grunt
+
+Running "watch" task
+Waiting...
+```
+
+### comparing with the sources at node_modules/bootstrap
+
+* installing the sources !!!
+
+```bash
+jpmena@jpmena-P34:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap$ npm i
+npm WARN deprecated qunitjs@2.4.1: 2.4.1 is the last version where QUnit will be published as 'qunitjs'. To receive future updates, you will need to change the package name to 'qunit'.
+
+> node-sass@4.7.2 install /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.7.2/linux-x64-57_binding.node
+Download complete  ] - :
+Binary saved to /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/node-sass/vendor/linux-x64-57/binding.node
+Caching binary to /home/jpmena/.npm/node-sass/4.7.2/linux-x64-57_binding.node
+
+> phantomjs-prebuilt@2.1.16 install /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/phantomjs-prebuilt
+> node install.js
+
+PhantomJS not found on PATH
+Downloading https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2
+Saving to /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2
+Receiving...
+  [=======================================-] 97%
+Received 22866K total.
+Extracting tar contents (via spawned process)
+Removing /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom
+Copying extracted folder /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2-extract-1512888808481/phantomjs-2.1.1-linux-x86_64 -> /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom
+Writing location.js file
+Done. Phantomjs binary available at /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs
+
+> node-sass@4.7.2 postinstall /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/node-sass/vendor/linux-x64-57/binding.node
+Testing binary
+Binary is fine
+
+> nodemon@1.12.5 postinstall /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/nodemon
+> node -e "console.log('\u001b[32mLove nodemon? You can now support the project via the open collective:\u001b[22m\u001b[39m\n > \u001b[96m\u001b[1mhttps://opencollective.com/nodemon/donate\u001b[0m\n')"
+
+Love nodemon? You can now support the project via the open collective:
+ > https://opencollective.com/nodemon/donate
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN bootstrap@4.0.0-beta.2 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN postcss-html@0.11.0 requires a peer of postcss-sass@>=0.2.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 1001 packages in 103.903s
+```
+
+* Interesing link: how to create a [styleguide for bootstrap](https://github.com/kalamuna/kss-bootstrap)
