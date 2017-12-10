@@ -28,29 +28,28 @@ echo "+ we need to add the vendor part of our symfony3's project.."
 cd $archive_repertoire
 unzip -qq $nom_archive && rm $nom_archive && cd ${nom_module}
 
-#echo $(pwd)
+echo $(pwd)
 
-#echo "++ We actually add the vendor part of our symfony3's project through composer"
-#composer install
-
-#echo " we need to rebuild the bundle.js which bundles all files of our react js project"
-#cd web/jpm
+#change to the latest node/npm versions !!!
+nvm use default
 #add grunt tooling project
-#npm install
-#add the bootstrap kit to your project
-#bower install
-#package the css for the production environment
-#grunt package
+npm install
+## remove odl tools
+npm run uninstall-tools
+## install all the tools
+npm run install-tools
+# compile compressed styles.css
+npm run grunt package
 
 
 cd $archive_repertoire
 
 zip -rqq $nom_archive ${nom_module}
 
-echo "archive: $archive_abs_path après ajout de la partie composer/vendor"
+echo "archive: $archive_abs_path created after having added node modules and run grunt tasks, it contains"
 
 unzip -l $nom_archive
 
 cd $init_repertoire
 
-echo "archive ${archive_repertoire}/${nom_archive} créée ..... OK!"
+echo "archive ${archive_repertoire}/${nom_archive} created ..... OK!"

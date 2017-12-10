@@ -1,5 +1,6 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "myvariables.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 /*
 * All my customizations, MAIN CSS
 * Introduction to the SASS syntax: http://sass-lang.com/guide
@@ -45,10 +46,10 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-body {
+/*body {
     margin: 0;
     -webkit-font-smoothing: auto;
-  }
+  }*/
   
   article,
   aside,
@@ -82,15 +83,7 @@ body {
   template {
     display: none;
   }
-  
-  a {
-    background-color: transparent;
-  }
-  
-  a:active,
-  a:hover {
-    outline: 0;
-  }
+
   
   dfn {
     font-style: italic;
@@ -264,9 +257,8 @@ body {
   /*--------------------------------------------------------------
   # Elements
   --------------------------------------------------------------*/
-  $bg_color: rgba(17, 0, 255, .2 );
   body {
-    background: $bg_color;
+    background: $body_bg;
     /* Fallback for when there is no custom background color defined. */
   }
   
@@ -295,18 +287,17 @@ body {
   --------------------------------------------------------------*/
   header#masthead {
     margin-bottom: 0;
-    background-color: #563d7c ;
+    background-color: $c93_bg ;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
     padding: .74rem 1rem;
-    border-bottom: 1px solid #9175bb ;
+    border-bottom: 1px solid darken($c93_bg,50%);
   }
   
   .navbar-brand > a {
-    color: rgba(0, 0, 0, 0.9);
+    color: $navbar-light-active-color;
     font-size: 1.1rem;
     outline: medium none;
     text-decoration: none;
-    color: #fff;
     font-weight: 700;
   }
   
@@ -368,148 +359,7 @@ body {
   /*--------------------------------------------------------------
   ## Menus
   --------------------------------------------------------------*/
-  #masthead nav {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  
-  #masthead .navbar-nav > li > a {
-    color: #cdbfe3;
-    padding: 0.5rem;
-    font-weight: 500;
-    font-size: 14px;
-  }
-  
-  #masthead .navbar-nav > li > a:hover {
-    color: #fff;
-    font-weight: 600;
-    /*background: #f9f9f9;*/
-  }
-  
-  .navbar-brand {
-    height: auto;
-  }
-  
-  .navbar-toggle .icon-bar {
-    background: #000 none repeat scroll 0 0;
-  }
-  
-  .dropdown-menu .dropdown-toggle::after {
-    border-bottom: 0.3em solid transparent;
-    border-left: 0.3em solid;
-    border-top: 0.3em solid transparent;
-  }
-  
-  /* Small menu. */
-  .menu-toggle,
-  .main-navigation.toggled ul {
-    display: block;
-  }
-  
-  .dropdown-item {
-    line-height: 1.2;
-    padding-bottom: 0.313rem;
-    padding-top: 0.313rem;
-  }
-  
-  .dropdown-menu {
-    min-width: 12.500rem;
-  }
-  
-  .dropdown .open .dropdown-menu {
-    display: block;
-    left: 12.250em;
-    top: 0;
-  }
-  
-  .dropdown-menu .dropdown-item {
-    white-space: normal;
-    font-size: 14px;
-  }
-  
-  @media screen and (min-width: 37.5em) {
-    .menu-toggle {
-      display: none;
-    }
-  }
-  @media screen and (min-width: 769px) {
-    .dropdown-menu li > .dropdown-menu {
-      right: -9.875rem;
-      top: 1.375rem;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    .dropdown-menu {
-      border: medium none;
-      margin-left: 1.250rem;
-      padding: 0;
-    }
-  
-    .dropdown-menu li a {
-      padding: 0;
-    }
-  
-    #masthead .navbar-nav > li > a {
-      padding-bottom: 0.625rem;
-      padding-top: 0.313rem;
-    }
-  
-    .navbar-light .navbar-toggler {
-      border: medium none;
-      outline: none;
-    }
-  }
-  .site-main .comment-navigation,
-  .site-main .posts-navigation,
-  .site-main .post-navigation {
-    margin: 0 0 1.5em;
-    overflow: hidden;
-  }
-  
-  .comment-navigation .nav-previous,
-  .posts-navigation .nav-previous,
-  .post-navigation .nav-previous {
-    float: left;
-    width: 50%;
-  }
-  
-  .comment-navigation .nav-next,
-  .posts-navigation .nav-next,
-  .post-navigation .nav-next {
-    float: right;
-    text-align: right;
-    width: 50%;
-  }
-  .comment-content.card-block {
-    padding: 20px;
-  }
-  
-  .navigation.post-navigation {
-    padding-top: 1.875rem;
-  }
-  
-  .post-navigation .nav-previous a,
-  .post-navigation .nav-next a {
-    border: 1px solid #ddd;
-    border-radius: 0.938rem;
-    display: inline-block;
-    padding: 0.313rem 0.875rem;
-    text-decoration: none;
-  }
-  
-  .post-navigation .nav-next a::after {
-    content: " \2192";
-  }
-  
-  .post-navigation .nav-previous a::before {
-    content: "\2190 ";
-  }
-  
-  .post-navigation .nav-previous a:hover,
-  .post-navigation .nav-next a:hover {
-    background: #eee none repeat scroll 0 0;
-  }
-  
+
   /*--------------------------------------------------------------
   # Accessibility
   --------------------------------------------------------------*/
@@ -906,73 +756,33 @@ body {
   .vc_desktop .entry-content {
     margin-top: 0;
   }
-  
+
+  .entry-footer{
+    background-color: $body-bg;
+    .cat-links {
+      color: $black;
+      a {
+        color: $link-color;
+      }
+    }
+  }
+
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
-  footer#colophon {
-    color: #99979c;
-    background-color: #f7f7f7;
-    font-size: 85%;
-  }
-  
-  .copyright {
-    font-size: 0.875rem;
-    margin-bottom: 0;
-    text-align: center;
-  }
-  
-  .copyright a, footer#colophon a {
-    color: inherit;
-  }
-  
-  @media screen and (max-width: 767px) {
-    #masthead .navbar-nav > li > a {
-      padding-bottom: 0.938rem;
-      padding-top: 0.938rem;
+  footer {
+    color: $navbar-light-active-color;
+    background-color: $c93_bg;
+    .credits {
+      font-size: 0.875rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    a{
+      color: inherit;
     }
   }
   /*--------------------------------------------------------------
   # Media Query
   --------------------------------------------------------------*/
-  /*--------------------------------------------------------------
-  ## Notebook
-  --------------------------------------------------------------*/
-  @media only screen and (max-width: 1280px) {
-    html {
-      font-size: 95%;
-    }
-  }
-  /*--------------------------------------------------------------
-  ## Netbook
-  --------------------------------------------------------------*/
-  @media only screen and (max-width: 1024px) {
-    html {
-      font-size: 93%;
-    }
-  }
-  /*--------------------------------------------------------------
-  ## iPad
-  --------------------------------------------------------------*/
-  @media only screen and (max-width: 960px) {
-    html {
-      font-size: 90%;
-    }
-  }
-  /*--------------------------------------------------------------
-  ## iPad
-  --------------------------------------------------------------*/
-  @media only screen and (max-width: 768px) {
-    html {
-      font-size: 88%;
-    }
-  }
-  /*--------------------------------------------------------------
-  ## iPad
-  --------------------------------------------------------------*/
-  @media only screen and (max-width: 480px) {
-    html {
-      font-size: 86%;
-    }
-  }
-  
+ // replace with bootstrap !!!!
