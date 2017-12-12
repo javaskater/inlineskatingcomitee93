@@ -31,7 +31,8 @@ unzip -qq $nom_archive && rm $nom_archive && cd ${nom_module}
 echo $(pwd)
 
 #change to the latest node/npm versions !!!
-nvm use default
+. ~/.nvm/nvm.sh #see https://unix.stackexchange.com/questions/184508/nvm-command-not-available-in-bash-script
+nvm use v8.9.3
 #add grunt tooling project
 npm install
 ## remove odl tools
