@@ -142,10 +142,10 @@ function inlineskatingcomitee93_scripts() {
 	// load bootstrap css
 	//wp_enqueue_style( 'inlineskatingcomitee93-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css' );
 	// load bootstrap css
-	//wp_enqueue_style( 'inlineskatingcomitee93-font-awesome', get_template_directory_uri() . '/inc/assets/css/font-awesome.min.css', false, '4.1.0' );
+	wp_enqueue_style( 'inlineskatingcomitee93-font-awesome', get_stylesheet_directory_uri() . '/node_modules/font-awesome/css/font-awesome.min.css', false, '4.1.0' );
 	// load AItheme styles
 	// load WP Bootstrap Starter styles
-	wp_enqueue_style( 'inlineskatingcomitee93', get_stylesheet_uri() );
+	//wp_enqueue_style( 'inlineskatingcomitee93', get_stylesheet_uri() );
     if(get_theme_mod( 'preset_style_setting' ) === 'poppins-lora') {
         wp_enqueue_style( 'inlineskatingcomitee93-poppins-lora-font', '//fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
     }
@@ -180,15 +180,16 @@ function inlineskatingcomitee93_scripts() {
         wp_enqueue_style( 'inlineskatingcomitee93-default', get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/blue.css', false, '' );
     }*/
 
-	wp_enqueue_script('jquery');
+	//wp_enqueue_script('jquery');
 
     // Internet Explorer HTML5 support
     wp_enqueue_script( 'html5hiv',get_stylesheet_directory_uri().'/inc/assets/js/html5.js', array(), '3.7.0', false );
     wp_script_add_data( 'html5hiv', 'conditional', 'lt IE 9' );
 
 	// load bootstrap js
-    wp_enqueue_script('inlineskatingcomitee93-popper', get_stylesheet_directory_uri() . '/node_modules/popper.js/dist/popper.min.js', array() );
-	wp_enqueue_script('inlineskatingcomitee93-bootstrapjs', get_stylesheet_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array() );
+	wp_enqueue_script('inlineskatingcomitee93-jquery', get_stylesheet_directory_uri() . '/node_modules/jquery/dist/jquery.js', array() );
+	wp_enqueue_script('inlineskatingcomitee93-bootstrapjs', get_stylesheet_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array('inlineskatingcomitee93-jquery') );
+    wp_enqueue_script('inlineskatingcomitee93-popper', get_stylesheet_directory_uri() . '/node_modules/popper.js/dist/popper.min.js', array('inlineskatingcomitee93-bootstrapjs') );
     wp_enqueue_script('inlineskatingcomitee93-themejs', get_stylesheet_directory_uri() . '/inc/assets/js/theme-script.js', array() );
 	wp_enqueue_script( 'inlineskatingcomitee93-skip-link-focus-fix', get_stylesheet_directory_uri() . '/inc/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -202,6 +203,11 @@ function inlineskatingcomitee93_scripts() {
  * see https://wordpress.stackexchange.com/questions/65523/how-do-i-dequeue-a-parent-themes-css-file
  */
 function inlineskatingcomitee93_parent_scripts() {
+	// load bootstrap css
+	wp_dequeue_style( 'wp-bootstrap-starter-bootstrap-css');
+	// load bootstrap css
+	wp_dequeue_style( 'wp-bootstrap-starter-font-awesome');
+	// load AItheme styles
 	wp_dequeue_script( 'wp-bootstrap-starter-popper');
 	wp_dequeue_script( 'wp-bootstrap-starter-bootstrapjs');
 	wp_dequeue_script( 'wp-bootstrap-starter-themejs');
@@ -209,8 +215,9 @@ function inlineskatingcomitee93_parent_scripts() {
 	wp_dequeue_script( 'html5hiv');
 }
 
-add_action( 'wp_enqueue_scripts', 'inlineskatingcomitee93_scripts' );
-add_action( 'wp_enqueue_scripts', 'inlineskatingcomitee93_parent_scripts' );
+add_action( 'wp_enqueue_scripts', 'inlineskatingcomitee93_parent_scripts', 15); // the default value used by the parent theme is 10
+add_action( 'wp_enqueue_scripts', 'inlineskatingcomitee93_scripts', 20 );
+
 
 function inlineskatingcomitee93_password_form() {
     global $post;
