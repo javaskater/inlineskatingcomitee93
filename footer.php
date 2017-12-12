@@ -19,8 +19,13 @@
 		<div class="container-fluid p-3 p-md-5">
             <div class="site-info">
                 &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
+				<span class="sep"> | </span>
+                <a class="credits" href="https://github.com/javaskater/inlineskatingcomitee93" target="_blank" title="GitHub Sources of the Theme" alt="GitHub Sources of the Theme" data-toggle="tooltip"
+            data-placement="top"><i
+                class="fa fa-github-square" aria-hidden="true"></i></a>
                 <span class="sep"> | </span>
-                <a class="credits" href="http://jpmena.eu" target="_blank" title="Jean-Pierre MENA" alt="Jean-Pierre MENA (Webmaster"><?php echo esc_html__('jpmena.eu','inlineskatingcomitee93'); ?></a>
+                <a class="credits" href="http://jpmena.eu" target="_blank" title="Webmaster's portal" alt="Jean-Pierre MENA (Webmaster)" data-toggle="tooltip"
+            data-placement="top"><?php echo esc_html__('jpmena.eu','inlineskatingcomitee93'); ?></a>
 
             </div><!-- close .site-info -->
 		</div>
