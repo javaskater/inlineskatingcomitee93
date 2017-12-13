@@ -12,7 +12,10 @@ nvm use v8.9.3
 # remove odl tools
 cd ${projet_repertoire}
 
-npm run uninstall-tools
+if [ -d "node_modules" ]; then
+  npm run uninstall-tools
+fi
+
 #install all the tools
 npm run install-tools
 #compile the scss files to css for the first run

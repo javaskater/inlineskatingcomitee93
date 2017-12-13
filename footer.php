@@ -18,7 +18,8 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container-fluid p-3 p-md-5">
             <div class="site-info">
-                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
+                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'" title="Comité de Roller de Seine Saint Denis" alt="Comité de Roller de Seine Saint Denis" data-toggle="tooltip"
+            data-placement="top">'.get_bloginfo('name').'</a>'; ?>
 				<span class="sep"> | </span>
                 <a class="credits" href="https://github.com/javaskater/inlineskatingcomitee93" target="_blank" title="GitHub Sources of the Theme" alt="GitHub Sources of the Theme" data-toggle="tooltip"
             data-placement="top"><i

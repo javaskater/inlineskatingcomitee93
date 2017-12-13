@@ -69,4 +69,6 @@ jQuery( function ( $ ) {
         }, 1000, 'swing');
     });
 
+    // Adding Tooltiping with popper.js
+    $('[data-toggle="tooltip"]').tooltip();
 });

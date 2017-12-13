@@ -299,11 +299,11 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     outline: medium none;
     text-decoration: none;
     font-weight: 700;
+    &:visited,hover{
+      text-decoration: none;
+    }
   }
-  
-  .navbar-brand > a:visited, .navbar-brand > a:hover {
-    text-decoration: none;
-  }
+
   
   #page-sub-header {
     position: relative;
@@ -312,24 +312,23 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     text-align: center;
     font-size: 1.25rem;
     background-size: cover !important;
+    h1 {
+      line-height: 1;
+      font-size: 4rem;
+      color: $sub-header-color;
+      margin: 0 0 1rem;
+      border: 0;
+      padding: 0;
+    };
+    p{
+      margin-bottom: 0;
+      line-height: 1.4;
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: darken($sub-header-color,30%);
+    };
   }
-  
-  #page-sub-header h1 {
-    line-height: 1;
-    font-size: 4rem;
-    color: #563e7c;
-    margin: 0 0 1rem;
-    border: 0;
-    padding: 0;
-  }
-  
-  #page-sub-header p {
-    margin-bottom: 0;
-    line-height: 1.4;
-    font-size: 1.25rem;
-    font-weight: 300;
-    color: #212529;
-  }
+
   a.page-scroller {
     color: #333;
     font-size: 2.6rem;

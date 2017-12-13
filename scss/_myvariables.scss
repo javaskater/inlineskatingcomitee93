@@ -1,7 +1,7 @@
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.;
 
 
 //
@@ -16,3 +16,5 @@ $dropdown-link-hover-bg: $c93_bg;
 $dropdown-link-hover-color: blue;
 
 $navbar-light-color:rgba($black,.5);
+
+$sub-header-color:$c93_bg;

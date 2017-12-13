@@ -188,10 +188,10 @@ function inlineskatingcomitee93_scripts() {
 
 	// load bootstrap js
 	wp_enqueue_script('inlineskatingcomitee93-jquery', get_stylesheet_directory_uri() . '/node_modules/jquery/dist/jquery.js', array() );
-	wp_enqueue_script('inlineskatingcomitee93-bootstrapjs', get_stylesheet_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.min.js', array('inlineskatingcomitee93-jquery') );
-    wp_enqueue_script('inlineskatingcomitee93-popper', get_stylesheet_directory_uri() . '/node_modules/popper.js/dist/popper.min.js', array('inlineskatingcomitee93-bootstrapjs') );
-    wp_enqueue_script('inlineskatingcomitee93-themejs', get_stylesheet_directory_uri() . '/inc/assets/js/theme-script.js', array() );
+	//the bootstrap-bundle now includes popper.js, no need to add it apart
+	wp_enqueue_script('inlineskatingcomitee93-bootstrapjs', get_stylesheet_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.js', array('inlineskatingcomitee93-jquery') );
 	wp_enqueue_script( 'inlineskatingcomitee93-skip-link-focus-fix', get_stylesheet_directory_uri() . '/inc/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script('inlineskatingcomitee93-themejs', get_stylesheet_directory_uri() . '/inc/assets/js/theme-script.js', array('inlineskatingcomitee93-bootstrapjs'), 1.0, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

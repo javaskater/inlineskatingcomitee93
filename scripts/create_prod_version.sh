@@ -36,7 +36,9 @@ nvm use v8.9.3
 #add grunt tooling project
 npm install
 ## remove odl tools
-npm run uninstall-tools
+if [ -d "node_modules" ]; then
+  npm run uninstall-tools
+fi
 ## install all the tools
 npm run install-tools
 # compile compressed styles.css
