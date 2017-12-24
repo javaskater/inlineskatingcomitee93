@@ -23,9 +23,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="masthead" class="site-header navbar-static-top" role="banner">
-        <div class="container">
-        <nav class="navbar navbar-light navbar-expand-sm" role="navigation">
+	<header id="masthead" class="container-fluid site-header navbar-static-top" role="banner">
+        <nav class="navbar navbar-expand-lg mr-auto bg_cdrs93" role="navigation">
                 <div class="navbar-brand">
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
@@ -42,31 +41,27 @@
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-			    </div>-->
-                <?php
-                wp_nav_menu(array(
-                'theme_location'    => 'primary',
-                'container'       => 'div',
-                'container_id'    => 'navbarSupportedContent',
-                'container_class' => 'collapse navbar-collapse',
-                'menu_id'         => false,
-                'menu_class'      => 'nav navbar-nav',
-                'depth'           => 3,
-                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                'walker'          => new wp_bootstrap_navwalker()
-                ));
-                ?>
-
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <?php
+                    wp_nav_menu(array(
+                    //'theme_location'    => 'primary',
+                    'container'       => false,
+                    //'container_id'    => 'navbarSupportedContent',
+                    //'container_class' => 'collapse navbar-collapse',
+                    'menu_id'         => false,
+                    'menu_class'      => 'navbar-nav mr-auto',
+                    'depth'           => 3,
+                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                    'walker'          => new wp_bootstrap_navwalker()
+                    ));
+                    ?> 
+                    <!--copy of themes/newspaper-x/searchform.php--> 
+                    <form role="search" method="get" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <input class="form-control mr-sm-2" name="s" type="search" type="<?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?>" placeholder="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>" aria-label="Rechercher">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="fa fa-search"></span> <?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?></button>
+                    </form>
+                </div>
             </nav>
-        </div>
 	</header><!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
         <div id="page-sub-header" <?php if(has_header_image()) { ?>style="background-image: url('<?php header_image(); ?>');" <?php } ?>>

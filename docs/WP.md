@@ -12,6 +12,15 @@
 ```php
     wp_enqueue_script('inlineskatingcomitee93-themejs', get_stylesheet_directory_uri() . '/inc/assets/js/theme-script.js', array('inlineskatingcomitee93-bootstrapjs'), 1.0, true );
 ```
-## 13/12/2017
 
-* TODO: 
+## 24/12/2017
+
+### TODO: 24//12/217
+
+* using poedit to translate string!!!
+  * starting with the search form (see _newspaper-x_)
+  * And its result page
+
+* Make the front_page taking rows with many colums:
+  * like _newspaper_x_
+  * like the [Jumbotron on the Bootstrap examples site](https://getbootstrap.com/docs/4.0/examples/jumbotron/)

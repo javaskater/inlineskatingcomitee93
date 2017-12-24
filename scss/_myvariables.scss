@@ -13,8 +13,12 @@ $dropdown-bg: lighten($c93_bg,20%);
 $body_bg: lighten($c93_bg,30%);
 //@debug "background-color: #{$body_bg}";
 $dropdown-link-hover-bg: $c93_bg;
-$dropdown-link-hover-color: blue;
 
 $navbar-light-color:rgba($black,.5);
+
+$navbar-light-hover-color:lighten($navbar-light-color,10%);
+
+$dropdown-link-hover-color:darken($navbar-light-color,20%);
+
 
 $sub-header-color:$c93_bg;

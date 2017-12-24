@@ -1,3 +1,14 @@
+# REFERENCES
+
+## Official WebSite
+
+* [The New theming Guide](http://getbootstrap.com/docs/4.0/getting-started/theming/)
+  * Based on SASS
+  * When Bootstrap 3 was based on LESS
+  * Especially interesting : [the way of overloading Boostrap Variables](http://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults)
+
+* In case of the [NavBars Color Choices](http://getbootstrap.com/docs/4.0/components/navbar/#color-schemes) 
+
 # ISSUES
 
 ## 12/12/2017

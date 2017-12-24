@@ -285,12 +285,40 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   /*--------------------------------------------------------------
   # Navigation
   --------------------------------------------------------------*/
-  header#masthead {
+  /*header#masthead {
     margin-bottom: 0;
     background-color: $c93_bg ;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
     padding: .74rem 1rem;
     border-bottom: 1px solid darken($c93_bg,50%);
+  }*/
+
+  .bg_cdrs93{
+    background-color: $c93_bg;
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .navbar-toggler {
+      color: $navbar-light-hover-color;
+      border-color: $navbar-light-hover-color;
+    }
+    li {
+      &:hover {
+        background-color: $dropdown-bg;
+      }
+      a {
+        &.nav-link {
+          color: $navbar-light-color;
+          &:focus, &:hover{
+            color: $navbar-light-hover-color;
+            background-color: $dropdown-bg;
+          }
+          &:visited{
+            background-color: $dropdown-bg;
+          }
+        }
+       }
+    }
   }
   
   .navbar-brand > a {
@@ -325,7 +353,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       line-height: 1.4;
       font-size: 1.25rem;
       font-weight: 300;
-      color: darken($sub-header-color,30%);
+      color: $black;
     };
   }
 
