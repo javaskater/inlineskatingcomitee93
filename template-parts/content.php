@@ -34,7 +34,7 @@
 				<?php the_post_thumbnail(); ?>
 			</div>
             <?php //From wordpress/wp-content/themes/newspaper-x/template-parts/content.php
-	        echo '<p>' . wp_trim_words( wp_kses_post( get_the_content( esc_html__( 'Read More', 'inlineskatingcomittee93' ) ) ), 35 ) . '</p>';
+	        echo '<p>' . wp_trim_words( wp_kses_post( get_the_content() ), 35 ) . '</p>';
             echo '<p><a class="btn btn-secondary" href="'.get_permalink().'" role="button">'.esc_html__( 'Read More', 'inlineskatingcomittee93' ).' »</a></p>';
         endif;
 
