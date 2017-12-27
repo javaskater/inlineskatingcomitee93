@@ -10,9 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
-	</div>
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
@@ -32,10 +29,13 @@
 		<?php
         if ( is_single() ) :
 			the_content();
-        else :
-            //From wordpress/wp-content/themes/newspaper-x/template-parts/content.php
+        else : ?>
+		    <div class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div>
+            <?php //From wordpress/wp-content/themes/newspaper-x/template-parts/content.php
 	        echo '<p>' . wp_trim_words( wp_kses_post( get_the_content( esc_html__( 'Read More', 'inlineskatingcomittee93' ) ) ), 35 ) . '</p>';
-            //the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
+            echo '<p><a class="btn btn-secondary" href="'.get_permalink().'" role="button">'.esc_html__( 'Read More', 'inlineskatingcomittee93' ).' »</a></p>';
         endif;
 
 			wp_link_pages( array(
