@@ -30,12 +30,12 @@ get_header(); ?>
 
 			/* Start the Loop */
 			$posts_count_index = 0;
-			$posts_per_row = 3;
+			$posts_per_row = 2;
 			while ( have_posts() ) : the_post();
 				if ( fmod( $posts_count_index, $posts_per_row ) == 0) { ?>
 					<div class="row">
 				<?php } ?>
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<?php 
 							/*
 							* Include the Post-Format-specific template for the content.
@@ -51,14 +51,16 @@ get_header(); ?>
 				<?php }
 				$posts_count_index += 1;
 			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
+			for($i=$posts_count_index+1; fmod( $i, $posts_per_row ) == 0; $i++){ ?>
+				<div class="col-md-6"></div>
+			<?php } ?>
+			<div class="row">
+				<?php the_posts_navigation(); ?>
+			</div>
+	<?php 		
+	else:
+		get_template_part( 'template-parts/content', 'none' );
+	endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->
