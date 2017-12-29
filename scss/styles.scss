@@ -52,7 +52,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     -webkit-font-smoothing: auto;
   }*/
   
-  article,
+/*  article,
   aside,
   details,
   figcaption,
@@ -208,11 +208,11 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   th {
     padding: 0;
   }
-  
+  */
   /*--------------------------------------------------------------
   # Typography
   --------------------------------------------------------------*/
-  h1, h2, h3, h4, h5, h6 {
+  /*h1, h2, h3, h4, h5, h6 {
     clear: both;
     color: #24292e;
     font-weight: 600;
@@ -253,7 +253,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   }
   h3.widget-title {
     font-size: 1.2rem;
-  }
+  }*/
   
   /*--------------------------------------------------------------
   # Elements
@@ -262,7 +262,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     background: $body_bg;
     /* Fallback for when there is no custom background color defined. */
   }
-  
+
   img {
     height: auto;
     /* Make sure images are scaled correctly. */
@@ -270,15 +270,15 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     /* Adhere to container width. */
   }
   
-  figure {
-    margin: 1em 0;
+ // figure {
+   // margin: 1em 0;
     /* Extra wide images within figure tags don't overflow the content area. */
-  }
+  //}
   
-  table {
+  /*table {
     margin: 0 0 1.5em;
     width: 100%;
-  }
+  } */
   
   /*--------------------------------------------------------------
   # Forms
@@ -334,7 +334,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   }
 
   
-  #page-sub-header {
+  /*#page-sub-header {
     position: relative;
     padding-top: 5rem;
     padding-bottom: 0;
@@ -388,7 +388,23 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       max-width: 43rem;
       margin: 0 auto;
     }
-  }
+  }*/
+#page-sub-header {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    background-size: cover !important;
+    h1, h2 {
+      //line-height: 1;
+      //font-size: 4rem;
+      color: $sub-header-color;
+      //margin: 0 0 1rem;
+      //border: 0;
+      //padding: 0;
+    }
+}
   /*--------------------------------------------------------------
   ## Links
   --------------------------------------------------------------*/
@@ -429,95 +445,13 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     z-index: 100000;
     /* Above WP toolbar. */
   }
-  
+
   /* Do not show the outline on the skip link target. */
   #content[tabindex="-1"]:focus {
     outline: 0;
   }
-  
-  /*--------------------------------------------------------------
-  # Alignments
-  --------------------------------------------------------------*/
-  .alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.5em;
-  }
-  
-  .alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.5em;
-  }
-  
-  .aligncenter {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  a img.alignright {
-    float: right;
-    margin: 0.313rem 0 1.25rem 1.25rem;
-  }
-  
-  a img.alignnone {
-    margin: 0.313rem 1.25rem 1.25rem 0;
-  }
-  
-  a img.alignleft {
-    float: left;
-    margin: 0.313rem 1.25rem 1.25rem 0;
-  }
-  
-  a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .wp-caption.alignnone {
-    margin: 0.313rem 1.25rem 1.25rem 0;
-  }
-  
-  .wp-caption.alignleft {
-    margin: 0.313rem 1.25rem 1.25rem 0;
-  }
-  
-  .wp-caption.alignright {
-    margin: 0.313rem 0 1.25rem 1.25rem;
-  }
-  
-  /*--------------------------------------------------------------
-  # Clearings
-  --------------------------------------------------------------*/
-  .clear:before,
-  .clear:after,
-  .entry-content:before,
-  .entry-content:after,
-  .comment-content:before,
-  .comment-content:after,
-  .site-header:before,
-  .site-header:after,
-  .site-content:before,
-  .site-content:after,
-  .site-footer:before,
-  .site-footer:after {
-    content: "";
-    display: table;
-    table-layout: fixed;
-  }
-  
-  .clear:after,
-  .entry-content:after,
-  .comment-content:after,
-  .site-header:after,
-  .site-content:after,
-  .site-footer:after {
-    clear: both;
-  }
-  
+
+
   /*--------------------------------------------------------------
   # Widgets
   --------------------------------------------------------------*/
@@ -529,21 +463,22 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   .widget select {
     max-width: 100%;
   }
-  
+
   .widget_search .search-form input[type="submit"] {
     display: none;
   }
-  
-  .nav > li > a:focus,
-  .nav > li > a:hover {
-    background-color: #eee;
-    text-decoration: none;
+
+  .nav > li > a {
+     &:focus, &:hover {
+      background-color: #eee;
+      text-decoration: none;
+    }
   }
   .half-rule {
     width: 6rem;
     margin: 2.5rem 0;
   }
-  
+
   /*--------------------------------------------------------------
   # Content
   --------------------------------------------------------------*/
@@ -554,90 +489,25 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     padding-bottom: 3.75rem;
     padding-top: 4.125rem;
   }
-  
-  .sticky .entry-title::before {
-    content: '\f08d';
-    font-family: fontawesome;
-    font-size: 1.563rem;
-    left: -2.5rem;
-    position: absolute;
-    top: 0.375rem;
-  }
-  
-  .sticky .entry-title {
-    position: relative;
-  }
-  
-  .single .byline,
-  .group-blog .byline {
-    display: inline;
-  }
-  
+
   .page-content,
   .entry-content,
   .entry-summary {
     margin: 1.5em 0 0;
     overflow: hidden;
   }
-  
-  .page-links {
-    clear: both;
-    margin: 0 0 1.5em;
-  }
-  
-  .page-template-blank-page .entry-content,
-  .blank-page-with-container .entry-content {
-    margin-top: 0;
-  }
-  
-  .post.hentry {
-    margin-bottom: 4rem;
-  }
-  
+
   .posted-on, .byline, .comments-link {
-    color: #9a9a9a;
+    color: $black;
   }
-  
-  .entry-title > a {
-    color: inherit;
+
+  .entry-title{
+    a {
+      color: $black;
+    }
   }
-  
-  /*--------------------------------------------------------------
-  ## Comments
-  --------------------------------------------------------------*/
-  .comment-content a {
-    word-wrap: break-word;
-  }
-  
-  .bypostauthor {
-    display: block;
-  }
-  
-  .comment-body .pull-left {
-    padding-right: 0.625rem;
-  }
-  
-  .comment-list .comment {
-    display: block;
-  }
-  
-  .comment-list {
-    padding-left: 0;
-  }
-  
-  .comments-title {
-    font-size: 1.125rem;
-  }
-  
-  .comment-list .pingback {
-    border-top: 1px solid rgba(0, 0, 0, 0.125);
-    padding: 0.563rem 0;
-  }
-  
-  .comment-list .pingback:first-child {
-    border: medium none;
-  }
-  
+
+
   /*--------------------------------------------------------------
   # Infinite scroll
   --------------------------------------------------------------*/
@@ -647,12 +517,12 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     /* Theme Footer (when set to scrolling) */
     display: none;
   }
-  
+
   /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
   .infinity-end.neverending .site-footer {
     display: block;
   }
-  
+
   /*--------------------------------------------------------------
   # Media
   --------------------------------------------------------------*/
@@ -664,14 +534,14 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     margin-top: 0;
     padding: 0;
   }
-  
+
   /* Make sure embeds and iframes fit their containers. */
   embed,
   iframe,
   object {
     max-width: 100%;
   }
-  
+
   /*--------------------------------------------------------------
   ## Captions
   --------------------------------------------------------------*/
@@ -696,18 +566,18 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     margin: 0;
     padding: 0.625rem;
   }
-  
+
   .wp-caption-text {
     text-align: center;
   }
-  
+
   /*--------------------------------------------------------------
   ## Galleries
   --------------------------------------------------------------*/
   .gallery {
     margin-bottom: 1.5em;
   }
-  
+
   .gallery-item {
     display: inline-block;
     text-align: center;
@@ -738,11 +608,26 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   .gallery-item .gallery-columns-9 {
     max-width: 11.11111%;
   }
-  
+
   .gallery-caption {
     display: block;
   }
-  
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+  footer {
+    color: $navbar-light-active-color;
+    background-color: $c93_bg;
+    .credits {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    a{
+      color: inherit;
+    }
+  }
   /*--------------------------------------------------------------
   # Plugin Compatibility
   --------------------------------------------------------------*/
@@ -752,44 +637,44 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   .woocommerce-cart-form .shop_table .coupon .input-text {
     width: 8.313rem !important;
   }
-  
+
   .variations_form .variations .value > select {
     margin-bottom: 0.625rem;
   }
-  
+
   .woocommerce-MyAccount-content .col-1,
   .woocommerce-MyAccount-content .col-2 {
     max-width: 100%;
   }
-  
+
   /*--------------------------------------------------------------
   ## Elementor
   --------------------------------------------------------------*/
   .elementor-page article .entry-footer {
     display: none;
   }
-  
+
   .elementor-page.page-template-fullwidth #content.site-content {
     padding-bottom: 0;
     padding-top: 0;
   }
-  
+
   .elementor-page .entry-content {
     margin-top: 0;
   }
-  
+
   /*--------------------------------------------------------------
   ## Visual Composer
   --------------------------------------------------------------*/
   .vc_desktop article .entry-footer {
     display: none;
   }
-  
+
   .vc_desktop #content.site-content {
     padding-bottom: 0;
     padding-top: 0;
   }
-  
+
   .vc_desktop .entry-content {
     margin-top: 0;
   }
@@ -801,22 +686,6 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       a {
         color: $link-color;
       }
-    }
-  }
-
-  /*--------------------------------------------------------------
-  # Footer
-  --------------------------------------------------------------*/
-  footer {
-    color: $navbar-light-active-color;
-    background-color: $c93_bg;
-    .credits {
-      font-size: 0.875rem;
-      margin-bottom: 0;
-      text-align: center;
-    }
-    a{
-      color: inherit;
     }
   }
   /*--------------------------------------------------------------
