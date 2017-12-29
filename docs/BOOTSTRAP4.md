@@ -55,3 +55,34 @@
 * Perhaps should we change the default menu extension:
   * prefer it to extend on hover
   * instead of on click (default Bootstrap4 behaviour)
+  
+## General
+
+### using Bootstrap4 Breakpoints:
+
+```scss
+/* includes a background image
+   *  only in case of a medium to large device
+   */
+  @include media-breakpoint-up(sm) {
+    .site-content {
+      background-color: transparent;
+      //&:before {
+      background-image: url('../images/cdrs93_transparent.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 1;
+      //}
+    }
+  }
+```
+
+
+### getting CDRS Logos
+
+* to make a transparent image out of what I got grom the CDRS
+  * found at that [imageMagick Forum](http://www.imagemagick.org/discourse-server/viewtopic.php?t=31549)
+
+```bash
+jpmena@jpmena-HP-ProDesk-600-G2-MT:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/images$ convert cdrs93.png -alpha set -background none -channel A -evaluate multiply 0.5 +channel cdrs93_transparent.png
+```

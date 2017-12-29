@@ -366,7 +366,20 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       text-decoration: none;
     }
   }
-
+  /* includes a background image
+   *  only in case of a medium to large device
+   */
+  @include media-breakpoint-up(sm) {
+    .site-content {
+      background-color: transparent;
+      //&:before {
+      background-image: url('../images/cdrs93_transparent.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 1;
+      //}
+    }
+  }
   
   /*#page-sub-header {
     position: relative;
