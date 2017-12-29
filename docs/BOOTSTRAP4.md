@@ -40,3 +40,18 @@
   --font-family-monospace: #{inspect($font-family-monospace)};
 }
 ```
+
+## navbar
+
+### customisation like [93 Parcs Website](http://parcsinfo.seine-saint-denis.fr/)
+
+* I tried to follow [The 93's design like used on the Pacs of that county](http://parcsinfo.seine-saint-denis.fr/)
+
+#### Still TODO on the 29/12/2017
+
+* Seems to work except for en error in the menu_walker when having 
+  * a top menu element without any children
+    * (_color of hover remains permanently after a JQuery error !!!_) 
+* Perhaps should we change the default menu extension:
+  * prefer it to extend on hover
+  * instead of on click (default Bootstrap4 behaviour)

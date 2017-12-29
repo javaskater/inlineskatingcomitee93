@@ -292,10 +292,27 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
     padding: .74rem 1rem;
     border-bottom: 1px solid darken($c93_bg,50%);
-  }*/
+  }
+
+  #menup > li > a{
+	display:block;
+	//width: 120px;
+	color: black;
+	//background-color: #f0e98b ;
+	height: 50px;
+	padding: 5px 25px 10px 25px;
+	font-size: 1em;
+	//line-height: 1em;
+	//font-weight: bold;
+	-webkit-transform: skewX(-15deg);
+	transform: skewX(-15deg);
+	border-right: 1px solid #555;
+	text-align: center;
+}
+  */
 
   .bg_cdrs93{
-    background-color: $c93_bg;
+    background-color: $body_bg;
     .navbar-toggler-icon {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
     }
@@ -304,23 +321,40 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       border-color: $navbar-light-hover-color;
     }
     li {
-      &:hover {
-        background-color: $dropdown-bg;
-      }
       a {
         &.nav-link {
           color: $navbar-light-color;
+          -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+          background-color: $body_bg;
+            @include media-breakpoint-up(sm) {
+              border-right: 1px solid $navbar-light-color;
+            }
+          }
+          .tdroit {
+            webkit-transform: skewX(15deg);
+            transform: skewX(15deg);
+          }
           &:focus, &:hover{
             color: $navbar-light-hover-color;
-            background-color: $dropdown-bg;
+            background-color: $my_dropdown-bg;
           }
           &:visited{
-            background-color: $dropdown-bg;
+            background-color: $my_dropdown-bg;
           }
         }
        }
-    }
-  }
+      ul {
+        &.dropdown-menu, &.show > li {
+          a {
+              &:hover {
+                background-color: $body_bg;
+                color: $black;
+              }
+            }
+          }
+        }
+      }
   
   .navbar-brand > a {
     color: $navbar-light-active-color;

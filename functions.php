@@ -229,3 +229,10 @@ function inlineskatingcomitee93_password_form() {
     return $o;
 }
 add_filter( 'the_password_form', 'inlineskatingcomitee93_password_form' );
+
+/**
+ * Load custom WordPress nav walker.
+ */
+if ( ! class_exists( 'inlineskating93_navwalker' )) {
+	require_once(get_stylesheet_directory().'/inc/inlineskating93_navwalker.php');
+}

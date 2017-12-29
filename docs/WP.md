@@ -24,3 +24,8 @@
 * Make the front_page taking rows with many colums:
   * like _newspaper_x_
   * like the [Jumbotron on the Bootstrap examples site](https://getbootstrap.com/docs/4.0/examples/jumbotron/)
+  
+## TODO 29/12/2017
+
+* checking my navbar_walker when main menu does not have sub-menus !!!
+* adapting my navbar_walker for really working with bootstrap 4 !!! 

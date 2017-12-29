@@ -9,9 +9,10 @@
 //
 $black:    #5c5c5c;
 $c93_bg: #43f8cb;
-$dropdown-bg: lighten($c93_bg,20%);
+$my_dropdown-bg: lighten($c93_bg,20%);
 //$body_bg: lighten($c93_bg,30%); //to change for something more http://parcsinfo.seine-saint-denis.fr/-Les-parcs-.html
 $body_bg: white;
+$dropdown-bg: $my_dropdown-bg; //used in bootstrap/dropdown.scss
 @debug "background-color: #{$body_bg}";
 $dropdown-link-hover-bg: $c93_bg;
 

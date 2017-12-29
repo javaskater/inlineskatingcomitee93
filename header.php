@@ -51,8 +51,8 @@
                     'menu_id'         => false,
                     'menu_class'      => 'navbar-nav mr-auto',
                     'depth'           => 3,
-                    'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                    'walker'          => new wp_bootstrap_navwalker()
+                    'fallback_cb'     => 'linlineskating93_navwalker::fallback',
+                    'walker'          => new linlineskating93_navwalker()
                     ));
                     ?> 
                     <!--copy of themes/newspaper-x/searchform.php--> 
