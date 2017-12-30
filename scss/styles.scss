@@ -320,6 +320,14 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       color: $navbar-light-hover-color;
       border-color: $navbar-light-hover-color;
     }
+    .btn_cdrs{
+      color: $btn_cdrs_color;
+      border-color: $btn_cdrs_color;
+      &:hover{
+        background-color: $btn_cdrs_color;
+        color: $body_bg;
+      }
+    }
     li {
       a {
         &.nav-link {
@@ -387,6 +395,10 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       height: 424px;
       //}
     }
+  }
+
+  .post-thumbnail{
+    margin-bottom: 1rem;
   }
   
   /*#page-sub-header {

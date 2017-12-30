@@ -58,7 +58,7 @@
                     <!--copy of themes/newspaper-x/searchform.php--> 
                     <form role="search" method="get" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                         <input class="form-control mr-sm-2" name="s" type="search" type="<?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?>" placeholder="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>" aria-label="Rechercher">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="fa fa-search"></span> <?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?></button>
+                        <button class="btn btn-outline-success btn_cdrs my-2 my-sm-0" type="submit"><span class="fa fa-search"></span> <?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?></button>
                     </form>
                 </div>
             </nav>
