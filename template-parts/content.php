@@ -35,7 +35,7 @@
 			</div>
             <?php //From wordpress/wp-content/themes/newspaper-x/template-parts/content.php
 	        echo '<p>' . wp_trim_words( wp_kses_post( get_the_content() ), 35 ) . '</p>';
-            echo '<p><a class="btn btn-outline-success my-2 my-sm-0" href="'.get_permalink().'" role="button">'.esc_html__( 'Read More', 'inlineskatingcomittee93' ).' »</a></p>';
+            ///echo '<p><a class="btn btn-outline-success my-2 my-sm-0" href="'.get_permalink().'" role="button">'.esc_html__( 'Read More', 'inlineskatingcomittee93' ).' »</a></p>';
         endif;
 
 			wp_link_pages( array(

@@ -324,16 +324,16 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       a {
         &.nav-link {
           color: $navbar-light-color;
-          -webkit-transform: skewX(-15deg);
-          transform: skewX(-15deg);
           background-color: $body_bg;
             @include media-breakpoint-up(sm) {
               border-right: 1px solid $navbar-light-color;
+              -webkit-transform: skewX(-15deg);
+              transform: skewX(-15deg);
+              .tdroit {
+                webkit-transform: skewX(15deg);
+                transform: skewX(15deg);
+              }
             }
-          }
-          .tdroit {
-            webkit-transform: skewX(15deg);
-            transform: skewX(15deg);
           }
           &:focus, &:hover{
             color: $navbar-light-hover-color;
@@ -370,13 +370,21 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
    *  only in case of a medium to large device
    */
   @include media-breakpoint-up(sm) {
-    .site-content {
+    body.home{
       background-color: transparent;
       //&:before {
       background-image: url('../images/cdrs93_transparent.png');
       background-repeat: no-repeat;
       background-size: 100%;
       z-index: 1;
+        //}
+    }
+    .site-footer {
+      background-color: $my_footer_bg;
+      //&:before {
+      background-image: url('../images/footer_cdrs.png');
+      background-repeat: no-repeat;
+      height: 424px;
       //}
     }
   }
@@ -727,7 +735,8 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
   }
 
   .entry-footer{
-    background-color: $body-bg;
+    background-color: transparent;
+    margin-bottom: 2rem;
     .cat-links {
       color: $black;
       a {

@@ -29,3 +29,8 @@
 
 * checking my navbar_walker when main menu does not have sub-menus !!!
 * adapting my navbar_walker for really working with bootstrap 4 !!! 
+
+## Ahmed's remarks:
+
+* Pb with remaining green on main navbar! especially the search botton !!!
+* remaining colour on the no-child menu !!
