@@ -329,6 +329,14 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       }
     }
     li {
+      &.current-menu-ancestor, &.current-menu-parent {
+        a{
+          &.nav-link{
+            color: $navbar-light-hover-color;
+            background-color: $my_dropdown-bg;
+          }
+        }
+      }
       a {
         &.nav-link {
           color: $navbar-light-color;
@@ -343,7 +351,7 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
               }
             }
           }
-          &:focus, &:hover{
+          &:focus, &:hover, &.active {
             color: $navbar-light-hover-color;
             background-color: $my_dropdown-bg;
           }

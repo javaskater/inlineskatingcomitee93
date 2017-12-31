@@ -78,11 +78,4 @@
 ```
 
 
-### getting CDRS Logos
 
-* to make a transparent image out of what I got grom the CDRS
-  * found at that [imageMagick Forum](http://www.imagemagick.org/discourse-server/viewtopic.php?t=31549)
-
-```bash
-jpmena@jpmena-HP-ProDesk-600-G2-MT:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/images$ convert cdrs93.png -alpha set -background none -channel A -evaluate multiply 0.5 +channel cdrs93_transparent.png
-```
