@@ -392,7 +392,8 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
       //&:before {
       background-image: url('../images/footer_cdrs.png');
       background-repeat: no-repeat;
-      height: 424px;
+      min-height: 400px;
+      background-position: center;
       //}
     }
   }

@@ -40,3 +40,6 @@
 * Taking page 2 of flyer for list of people skating Seine Saint Denis
 * Seine Saint Denis Logo ?
 * understanding why each gallery's thumb does get on top of eachother ?
+* When a image link is link of a pdf:
+  * Add the pdf _fa-icon_ (see personal portal)
+  * Add the _target=_blank_ attribute
