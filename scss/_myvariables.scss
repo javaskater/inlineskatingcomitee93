@@ -8,7 +8,8 @@
 // Color system
 //
 $black:    #5c5c5c;
-$c93_bg: #f0e98b;
+$c93_bg: #f0e98b; // see http://parcsinfo.seine-saint-denis.fr/
+//$c93_bg: #E0D9CF; // see http://seinesaintdenis.fr/
 $my_dropdown-bg: $c93_bg;
 $my_footer_bg: lighten($c93_bg,15%);
 $btn_cdrs_color: darken($c93_bg,10%);

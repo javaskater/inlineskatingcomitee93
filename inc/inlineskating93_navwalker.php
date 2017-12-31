@@ -101,7 +101,7 @@ class linlineskating93_navwalker extends Walker_Nav_Menu {
 
             }
 
-            /*
+            
             if ($depth === 0) {
                 $atts['class'] = 'nav-link';
             }
@@ -115,7 +115,7 @@ class linlineskating93_navwalker extends Walker_Nav_Menu {
             if (in_array('current-menu-item', $item->classes)) {
                 $atts['class'] .= ' active';
             }
-            */
+            
 
 			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 

@@ -30,7 +30,13 @@
 * checking my navbar_walker when main menu does not have sub-menus !!!
 * adapting my navbar_walker for really working with bootstrap 4 !!! 
 
-## Ahmed's remarks:
+### Ahmed's remarks:
 
-* Pb with remaining green on main navbar! especially the search botton !!!
 * remaining colour on the no-child menu !!
+* Dropdown on hover instead of click ?
+
+## TODO 31/12/2017
+
+* Taking page 2 of flyer for list of people skating Seine Saint Denis
+* Seine Saint Denis Logo ?
+* understanding why each gallery's thumb does get on top of eachother ?
