@@ -32,14 +32,6 @@ jQuery( function ( $ ) {
     $('.woocommerce-Input--text, .woocommerce-Input--email, .woocommerce-Input--password').addClass('form-control');
     $('.woocommerce-Button.button').addClass('btn btn-primary mt-2').removeClass('button');
 
-    /*$('ul.dropdown-menu').on('click', function(event) {
-        //event.preventDefault();
-        //event.stopPropagation();
-        var li = $(this).parent();
-        li.siblings().children("a").removeClass("menuOpen");
-        li.children("a").addClass("menuOpen");
-    });*/
-
     // Add Option to add Fullwidth Section
     function fullWidthSection(){
         var screenWidth = $(window).width();

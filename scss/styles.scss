@@ -355,8 +355,8 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
             color: $navbar-light-hover-color;
             background-color: $my_dropdown-bg;
           }
-          &:visited{
-            background-color: $my_dropdown-bg;
+          &.menuOpen{
+              background-color: $my_dropdown-bg;
           }
         }
        }
