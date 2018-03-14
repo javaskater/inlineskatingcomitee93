@@ -1,0 +1,771 @@
+@import "myvariables.scss";
+@import "bootstrap.scss";
+@import "navigation/menu.scss";
+
+/*
+* All my customizations, MAIN CSS
+* Introduction to the SASS syntax: http://sass-lang.com/guide
+* More about Sass possibilities: http://sass-lang.com/documentation/file.SASS_REFERENCE.html
+*/
+
+/*
+Theme Name: WP Bootstrap Starter
+Theme URI: https://afterimagedesigns.com/wp-bootstrap-starter/
+Author: Afterimage Designs
+Author URI: https://afterimagedesigns.com/
+Description:  The best WordPress starter theme based on the most powerful frameworks in the world: "_s" (by Automattic, the main people behind WordPress development), Twitter Bootstrap (the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web) and Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for easy scalable vector graphics on websites). This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated. Page templates includes Right-sidebar (default page template), Left-Sidebar, Full-Width, Blank with container, Blank without container Page. Other features - Currently using Bootstrap v4.0.0-beta.2 , Widgetized footer area, WooCommerce ready, Compatible with Contact Form 7, Compatible with Visual Composer, Compatible with Elementor Page Builder. This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
+Version: 3.0.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wp-bootstrap-starter
+Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Woocommerce
+# Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/*body {
+    margin: 0;
+    -webkit-font-smoothing: auto;
+  }*/
+  
+/*  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  main,
+  menu,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+  
+  audio,
+  canvas,
+  progress,
+  video {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  
+  audio:not([controls]) {
+    display: none;
+    height: 0;
+  }
+  
+  [hidden],
+  template {
+    display: none;
+  }
+
+  
+  dfn {
+    font-style: italic;
+  }
+  
+  mark {
+    background: #ff0;
+    color: #000;
+  }
+  
+  small {
+    font-size: 80%;
+  }
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  img {
+    border: 0;
+  }
+  
+  svg:not(:root) {
+    overflow: hidden;
+  }
+  
+  figure {
+    margin: 1em 2.5rem;
+  }
+  
+  hr {
+    box-sizing: content-box;
+    height: 0;
+  }
+  
+  button {
+    overflow: visible;
+  }
+  
+  button,
+  select {
+    text-transform: none;
+  }
+  
+  button,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+  }
+  
+  button[disabled],
+  html input[disabled] {
+    cursor: default;
+  }
+  
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  
+  input {
+    line-height: normal;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+  }
+  
+  legend {
+    border: 0;
+    padding: 0;
+  }
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  optgroup {
+    font-weight: bold;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  td,
+  th {
+    padding: 0;
+  }
+  */
+  /*--------------------------------------------------------------
+  # Typography
+  --------------------------------------------------------------*/
+  /*h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    color: #24292e;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 15px;
+  }
+  h1 {
+    border-bottom: #eaecef;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    font-size: 32px;
+    padding-bottom: 10px;
+  }
+  h2 {
+    font-size: 24px;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
+    line-height: 1.25;
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  h4 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  h5 {
+    font-size: 14px;
+    line-height: 17.5px;
+  }
+  
+  p {
+    margin-bottom: 1.5em;
+  }
+  h1.entry-title {
+    font-size: 21px;
+  }
+  h3.widget-title {
+    font-size: 1.2rem;
+  }*/
+  
+  /*--------------------------------------------------------------
+  # Elements
+  --------------------------------------------------------------*/
+  body {
+    background: $body_bg;
+    /* Fallback for when there is no custom background color defined. */
+  }
+
+  img {
+    height: auto;
+    /* Make sure images are scaled correctly. */
+    max-width: 100%;
+    /* Adhere to container width. */
+  }
+  
+ // figure {
+   // margin: 1em 0;
+    /* Extra wide images within figure tags don't overflow the content area. */
+  //}
+  
+  /*table {
+    margin: 0 0 1.5em;
+    width: 100%;
+  } */
+  
+  /*--------------------------------------------------------------
+  # Forms
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Navigation
+  --------------------------------------------------------------*/
+  /*header#masthead {
+    margin-bottom: 0;
+    background-color: $c93_bg ;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+    padding: .74rem 1rem;
+    border-bottom: 1px solid darken($c93_bg,50%);
+  }
+
+  #menup > li > a{
+	display:block;
+	//width: 120px;
+	color: black;
+	//background-color: #f0e98b ;
+	height: 50px;
+	padding: 5px 25px 10px 25px;
+	font-size: 1em;
+	//line-height: 1em;
+	//font-weight: bold;
+	-webkit-transform: skewX(-15deg);
+	transform: skewX(-15deg);
+	border-right: 1px solid #555;
+	text-align: center;
+}
+  */
+
+  .bg_cdrs93{
+    background-color: $body_bg;
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .navbar-toggler {
+      color: $navbar-light-hover-color;
+      border-color: $navbar-light-hover-color;
+    }
+    .btn_cdrs{
+      color: $btn_cdrs_color;
+      border-color: $btn_cdrs_color;
+      &:hover{
+        background-color: $btn_cdrs_color;
+        color: $body_bg;
+      }
+    }
+    li {
+      &.current-menu-ancestor, &.current-menu-parent {
+        a{
+          &.nav-link{
+            color: $navbar-light-hover-color;
+            background-color: $my_dropdown-bg;
+          }
+        }
+      }
+      a {
+        &.nav-link {
+          color: $navbar-light-color;
+          background-color: $body_bg;
+            @include media-breakpoint-up(sm) {
+              border-right: 1px solid $navbar-light-color;
+              -webkit-transform: skewX(-15deg);
+              transform: skewX(-15deg);
+              .tdroit {
+                webkit-transform: skewX(15deg);
+                transform: skewX(15deg);
+              }
+            }
+          }
+          &:focus, &:hover, &.active {
+            color: $navbar-light-hover-color;
+            background-color: $my_dropdown-bg;
+          }
+          &.menuOpen{
+              background-color: $my_dropdown-bg;
+          }
+        }
+       }
+      ul {
+        &.dropdown-menu, &.show > li {
+          a {
+              &:hover {
+                background-color: $body_bg;
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+  
+  .navbar-brand > a {
+    color: $navbar-light-active-color;
+    font-size: 1.1rem;
+    outline: medium none;
+    text-decoration: none;
+    font-weight: 700;
+    &:visited,hover{
+      text-decoration: none;
+    }
+  }
+  /* includes a background image
+   *  only in case of a medium to large device
+   */
+  @include media-breakpoint-up(sm) {
+    body.home{
+      background-color: transparent;
+      //&:before {
+      background-image: url('../images/cdrs93_transparent.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 1;
+        //}
+    }
+    .site-footer {
+      background-color: $my_footer_bg;
+      //&:before {
+      background-image: url('../images/footer_cdrs.png');
+      background-repeat: no-repeat;
+      min-height: 400px;
+      background-position: center;
+      //}
+    }
+  }
+
+  .post-thumbnail{
+    margin-bottom: 1rem;
+  }
+  
+  /*#page-sub-header {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    background-size: cover !important;
+    h1 {
+      line-height: 1;
+      font-size: 4rem;
+      color: $sub-header-color;
+      margin: 0 0 1rem;
+      border: 0;
+      padding: 0;
+    };
+    h2{
+      line-height: 1;
+      font-size: 2 rem;
+      color: $sub-header-color;
+      margin: 0 0 1rem;
+      border: 0;
+      padding: 0;
+    };
+    p{
+      margin-bottom: 0;
+      line-height: 1.4;
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: $black;
+    };
+  }
+
+  a.page-scroller {
+    color: #333;
+    font-size: 2.6rem;
+    display: inline-block;
+    margin-top: 2rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    #page-sub-header h1 {
+      font-size: 3.750rem;
+      line-height: 1;
+    }
+  
+    #page-sub-header {
+      font-size: 1.25rem;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    #page-sub-header p {
+      max-width: 43rem;
+      margin: 0 auto;
+    }
+  }*/
+#page-sub-header {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    background-size: cover !important;
+    h1, h2 {
+      //line-height: 1;
+      //font-size: 4rem;
+      color: $sub-header-color;
+      //margin: 0 0 1rem;
+      //border: 0;
+      //padding: 0;
+    }
+}
+  /*--------------------------------------------------------------
+  ## Links
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  ## Menus
+  --------------------------------------------------------------*/
+
+  /*--------------------------------------------------------------
+  # Accessibility
+  --------------------------------------------------------------*/
+  /* Text meant only for screen readers. */
+  .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 0.313rem;
+    line-height: normal;
+    padding: 0.938rem 1.438rem 0.875rem;
+    text-decoration: none;
+    top: 0.313rem;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+  }
+
+  /* Do not show the outline on the skip link target. */
+  #content[tabindex="-1"]:focus {
+    outline: 0;
+  }
+
+
+  /*--------------------------------------------------------------
+  # Widgets
+  --------------------------------------------------------------*/
+  .widget {
+    margin: 0 0 1.5em;
+    font-size: 14px;
+    /* Make sure select elements fit in widgets. */
+  }
+  .widget select {
+    max-width: 100%;
+  }
+
+  .widget_search .search-form input[type="submit"] {
+    display: none;
+  }
+
+  .nav > li > a {
+     &:focus, &:hover {
+      background-color: #eee;
+      text-decoration: none;
+    }
+  }
+  .half-rule {
+    width: 6rem;
+    margin: 2.5rem 0;
+  }
+
+  /*--------------------------------------------------------------
+  # Content
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  ## Posts and pages
+  --------------------------------------------------------------*/
+  #content.site-content {
+    padding-bottom: 3.75rem;
+    padding-top: 4.125rem;
+  }
+
+  .page-content,
+  .entry-content,
+  .entry-summary {
+    margin: 1.5em 0 0;
+    overflow: hidden;
+  }
+
+  .posted-on, .byline, .comments-link {
+    color: $black;
+  }
+
+  .entry-title{
+    a {
+      color: $black;
+    }
+  }
+
+
+  /*--------------------------------------------------------------
+  # Infinite scroll
+  --------------------------------------------------------------*/
+  /* Globally hidden elements when Infinite Scroll is supported and in use. */
+  .infinite-scroll .posts-navigation,
+  .infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+  }
+
+  /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+  .infinity-end.neverending .site-footer {
+    display: block;
+  }
+
+  /*--------------------------------------------------------------
+  # Media
+  --------------------------------------------------------------*/
+  .page-content .wp-smiley,
+  .entry-content .wp-smiley,
+  .comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  /* Make sure embeds and iframes fit their containers. */
+  embed,
+  iframe,
+  object {
+    max-width: 100%;
+  }
+
+  /*--------------------------------------------------------------
+  ## Captions
+  --------------------------------------------------------------*/
+  .wp-caption {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border: 1px solid #f0f0f0;
+    max-width: 96%;
+    padding: 0.313rem 0.313rem 0;
+    text-align: center;
+  }
+  .wp-caption img[class*="wp-image-"] {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+  }
+  .wp-caption .wp-caption-text {
+    font-size: 0.688rem;
+    line-height: 1.063rem;
+    margin: 0;
+    padding: 0.625rem;
+  }
+
+  .wp-caption-text {
+    text-align: center;
+  }
+
+  /*--------------------------------------------------------------
+  ## Galleries
+  --------------------------------------------------------------*/
+  .gallery {
+    margin-bottom: 1.5em;
+  }
+
+  .gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+  }
+  .gallery-item .gallery-columns-2 {
+    max-width: 50%;
+  }
+  .gallery-item .gallery-columns-3 {
+    max-width: 33.33333%;
+  }
+  .gallery-item .gallery-columns-4 {
+    max-width: 25%;
+  }
+  .gallery-item .gallery-columns-5 {
+    max-width: 20%;
+  }
+  .gallery-item .gallery-columns-6 {
+    max-width: 16.66667%;
+  }
+  .gallery-item .gallery-columns-7 {
+    max-width: 14.28571%;
+  }
+  .gallery-item .gallery-columns-8 {
+    max-width: 12.5%;
+  }
+  .gallery-item .gallery-columns-9 {
+    max-width: 11.11111%;
+  }
+
+  .gallery-caption {
+    display: block;
+  }
+
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+  footer {
+    color: $navbar-light-active-color;
+    background-color: $c93_bg;
+    .credits {
+      font-size: 1.2rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+    a{
+      color: inherit;
+    }
+  }
+  /*--------------------------------------------------------------
+  # Plugin Compatibility
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  ## Woocommerce
+  --------------------------------------------------------------*/
+  .woocommerce-cart-form .shop_table .coupon .input-text {
+    width: 8.313rem !important;
+  }
+
+  .variations_form .variations .value > select {
+    margin-bottom: 0.625rem;
+  }
+
+  .woocommerce-MyAccount-content .col-1,
+  .woocommerce-MyAccount-content .col-2 {
+    max-width: 100%;
+  }
+
+  /*--------------------------------------------------------------
+  ## Elementor
+  --------------------------------------------------------------*/
+  .elementor-page article .entry-footer {
+    display: none;
+  }
+
+  .elementor-page.page-template-fullwidth #content.site-content {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .elementor-page .entry-content {
+    margin-top: 0;
+  }
+
+  /*--------------------------------------------------------------
+  ## Visual Composer
+  --------------------------------------------------------------*/
+  .vc_desktop article .entry-footer {
+    display: none;
+  }
+
+  .vc_desktop #content.site-content {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .vc_desktop .entry-content {
+    margin-top: 0;
+  }
+
+  .entry-footer{
+    background-color: transparent;
+    margin-bottom: 2rem;
+    .cat-links {
+      color: $black;
+      a {
+        color: $link-color;
+      }
+    }
+  }
+  /*--------------------------------------------------------------
+  # Media Query
+  --------------------------------------------------------------*/
+ // replace with bootstrap !!!!

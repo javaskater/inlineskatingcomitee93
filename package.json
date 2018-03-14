@@ -1,51 +1,38 @@
 {
   "name": "inlineskatingcomitee93",
-  "version": "0.0.1",
-  "description": "Bootstrap 4 / SASS Theme for a Roller Comitee",
-  "main": "index.js",
-  "engines": {
-    "node": "8.9.x"
+  "version": "0.5.0",
+  "description": "Bootstrap4 Theme for inlineskating activities",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
   },
   "scripts": {
-    "install-tools": "npm install --force",
-    "uninstall-tools": "rm -r node_modules;",
-    "grunt": "node node_modules/grunt-cli/bin/grunt",
-    "http": "node node_modules/http-server/bin/http-server"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "node node_modules/gulp-cli/bin/gulp.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/javaskater/inlineskatingcomitee93.git"
   },
   "keywords": [
-    "InLineSkating",
     "Bootstrap4",
-    "SASS",
-    "Starter",
-    "Theme"
+    "Wordpress",
+    "InlineSkating"
   ],
   "author": "JPMena",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/javaskater/inlineskatingcomitee93/issues"
   },
   "homepage": "https://github.com/javaskater/inlineskatingcomitee93#readme",
-  "devDependencies": {
-    "autoprefixer": "^7.2.2",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-postcss": "^0.9.0",
-    "http-server": "^0.10.0"
-  },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.2.1"
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1"
   },
-  "bundleDependencies": [
-    "bootstrap",
-    "jquery",
-    "font-awesome"
-  ]
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-sass": "^3.1.0"
+  }
 }
