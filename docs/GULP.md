@@ -273,7 +273,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./dist"
         }
     });
 });
@@ -291,14 +291,90 @@ gulp.task('browser-sync', function() {
     * [Le tutoriel coursetroo](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course)
     * [la documentation officielle de browser.io pour Gulp](https://browsersync.io/docs/gulp) précédente
     
+* le fait que notre static server ait pour racine dist et sachant que:
 
-#### Ajouter l'envoi des feuilles de styles compilées au navigateur
+```bash
+jpmena@jpmena-HP-ProDesk-600-G2-MT:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ tree dist/
+dist/
+├── css
+│   ├── navigation
+│   │   └── menu.css
+│   └── styles.css
+├── index.html
+└── js
+    ├── bootstrap.bundle.js
+    └── jquery.js
+``` 
+* La page appelée par défaut par *browser-sync* sera **index.html**
+* Dans le *app/index.html* que nous éditons, l'accés au ressources doit être déjà 
+    * _css/style.css_ pour la feuille de style principale
+    * _js/bootstrap.bundle.js_ et _js/jquery.js_ pour les 2 fichiers javascript que nous chargeons en fin de page
+    
+
+## Ajouter l'envoi des feuilles de styles compilées et autres ressources web statiques au navigateur
 
 * On le met en oeuvre en synthéhtisant 
     * [notre tutoriel](https://la-cascade.io/gulp-pour-les-debutants/)
     * [Le tutoriel coursetroo](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course)
     * [la documentation officielle de browser.io pour Gulp](https://browsersync.io/docs/gulp) 
+* Que ce soist pour le 
+    * SASS: compilation
+    * JS copie des bons fichiers
+    * HTML copie de l'index.html
+* l'envoie vers la destination est streamé à browser-sync
+* pour browser-sync cela équivaut à un reload comme indiqué dans la log
+    * notamment quand je modifie le fichier source _app/index.html_ 
     
+```bash
+# je lance la tache par défaut qui est le serve et appelle toutes les ressources puis leurs watch !!!
+jpmena@jpmena-HP-ProDesk-600-G2-MT:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ npm run gulp
+
+> inlineskatingcomitee93@0.5.0 gulp /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93
+> node node_modules/gulp-cli/bin/gulp.js
+
+[14:35:56] Using gulpfile ~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/gulpfile.js
+[14:35:56] Starting 'sass'...
+[14:35:56] Starting 'js'...
+[14:35:56] Starting 'html'...
+[14:35:56] Starting 'browser-static-ressources'...
+[14:35:56] Finished 'browser-static-ressources' after 8.51 ms
+[Browsersync] Access URLs:
+ ----------------------------
+ Local: http://localhost:3000
+ ----------------------------
+    UI: http://localhost:3001
+ ----------------------------
+[Browsersync] Serving files from: dist
+[Browsersync] 1 file changed (index.html)
+[14:35:56] Finished 'html' after 69 ms
+[Browsersync] 2 files changed (bootstrap.bundle.js, jquery.js)
+[14:35:56] Finished 'js' after 75 ms
+/home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/app/scss/_myvariables.scss:19 DEBUG: background-color: white
+[Browsersync] 2 files changed (styles.css, menu.css)
+[14:35:56] Finished 'sass' after 244 ms
+[14:35:56] Starting 'dist'...
+[14:35:56] Finished 'dist' after 31 μs
+[14:35:56] Starting 'serve'...
+[14:35:56] Finished 'serve' after 14 ms
+[14:35:56] Starting 'default'...
+[14:35:56] Finished 'default' after 2.95 μs
+[Browsersync] Reloading Browsers... (buffered 5 events)
+[14:36:34] Starting 'html'...
+## J'a ajouté un titre <h3> dans app/index.html
+[Browsersync] 1 file changed (index.html)
+[14:36:34] Finished 'html' after 13 ms
+[Browsersync] Reloading Browsers...
+
+```
+
+* pas besoin sur le watch d'appeler le reload() du browser-sync puisque à chaque envoie des ressources avers dist j'ai joute son streaming dansle navigateur
+    * ce qui a pour effet de provoquer son rechargement !!!
+    
+#### Les URL de browser-sync:
+
+* Comme indiquée dans la log précédente, browser-sync met à disposition 2 URLs:
+ * <http://localhost:3000/> qui est lancée par défaut et qui nous donne le résultat de notre index.html
+ * <http://localhost:3001/> sur laquelle il faut se rendre pour retrouer l'interface d'administration de l'outil
 
 
 
