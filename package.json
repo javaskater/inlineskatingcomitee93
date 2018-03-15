@@ -30,6 +30,7 @@
     "jquery": "^3.3.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-cli": "^2.0.1",

@@ -1,6 +1,10 @@
 # Guide
 
 *  Je suis ce guide [Gulp pour les débutants](https://la-cascade.io/gulp-pour-les-debutants/)
+* Et en même temps ce [Cours en ligne Coursetro](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course)
+    * qui contient à la fois une version Video/YouTube
+    * et la même chode en page de Bloc avec les morceaux de code qui vont bien
+    * Angalis clair (bien parlé et bien écrit)
 
 ## La structure
 
@@ -215,18 +219,87 @@ jpmena@jpmena-HP-ProDesk-600-G2-MT:~/CDRS/wordpress/wp-content/themes/inlineskat
 [16:29:15] Finished 'sass' after 147 ms
 
 ```
+## transport des sources Javascript de app/js vers dist/js
 
-## TODO:
+
+## Mise en place de index.hml avec browser-sync pour des essais maquettes HTML:
+
+* essais sans passer par la pile Wordpress + extensions
 
 ### Une sorte de StyleGuide
 
 * définir un fichier index.html qui me permet de tester mes sources sass Bootstrap....
     * Cf. [Tutorial Vidéo Bootstrap 4](http://blog.jpmena.eu/2018/03/07/a-bootstrap4-video-tutorial-you-shouldnt-miss/)
+    * Plus particulièrement j'attribue le contenu initial 
 
 ### Mettre en oeuvre [browser-sync](https://www.npmjs.com/package/browser-sync)
 
+#### Ajout du module [browser-sync](https://www.npmjs.com/package/browser-sync) dans les packages NodeJS
+
+* La commande suivante: 
+    * charge le module et ses dépendances dans les _node_modules_
+    * ajoute la dépendance dans la section _dev-dependencies_ du package.json !!
+
+```bash
+jpmena@jpmena-HP-ProDesk-600-G2-MT:~/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ npm i browser-sync --save-dev
+
+> uws@9.14.0 install /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/uws
+> node-gyp rebuild > build_log.txt 2>&1 || exit 0
+
+npm WARN bootstrap@4.0.0 requires a peer of popper.js@^1.12.9 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
++ browser-sync@2.23.6
+added 187 packages in 33.186s
+```
+
+#### Initilisation
+
 * noter l'exemple avec le console.log sur [browser-sync](https://www.npmjs.com/package/browser-sync)
-* On le met en oeuvre cf. [tutoriel](https://la-cascade.io/gulp-pour-les-debutants/):
-    * au lancement de la tâche de watch (pour définir les sources (_dist_) sur lequelles se synchroniser)
-    * à chaque appel de la tâche _sass_, on appelle son reload !!!
+* [la documentation officielle de browser.io pour Gulp](https://browsersync.io/docs/gulp) nous explique 
+    * que l'on peut soit synchroniser des ressources statique (option: __basedir_)
+    * ou par rapport à un serveur (php par exemple, option: _proxy_)
+    
+*  On l'initiliesera au moment de la tâche qui va appeler le scan de ressources
+    * sass
+    * mais aussi du index.hml
+    * ce pourrait être de fichiers js 
+```javascript
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+// or... php server for example
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "yourlocal.dev"
+    });
+});
+```
+* On le met en oeuvre en synthéhtisant 
+    * [notre tutoriel](https://la-cascade.io/gulp-pour-les-debutants/)
+    * [Le tutoriel coursetroo](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course)
+    * [la documentation officielle de browser.io pour Gulp](https://browsersync.io/docs/gulp) précédente
+    
+
+#### Ajouter l'envoi des feuilles de styles compilées au navigateur
+
+* On le met en oeuvre en synthéhtisant 
+    * [notre tutoriel](https://la-cascade.io/gulp-pour-les-debutants/)
+    * [Le tutoriel coursetroo](https://coursetro.com/posts/code/130/Learn-Bootstrap-4-Final-in-2018-with-our-Free-Crash-Course)
+    * [la documentation officielle de browser.io pour Gulp](https://browsersync.io/docs/gulp) 
+    
+
+
+
      
