@@ -9,4 +9,4 @@ License: GNU General Public License v2 or later
 Tags: blog, inline Skating, Bootstrap4
 TEMPLATE: wp-bootstrap-starter
 */
-@import url("css/styles.css");
+@import url("dist/css/styles.css");
