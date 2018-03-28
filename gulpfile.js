@@ -1,6 +1,7 @@
 //libraries I need ...
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
+var sourcemaps = require('gulp-sourcemaps');// To hellp have a map file that will help FF to retrive the original ssass files
 var sass = require('gulp-sass');
 
 
@@ -26,11 +27,13 @@ const distJs = destSources +'/js';
 // Task for compiling sass to css
 gulp.task('sass', function () {
     return gulp.src(`${srcSass}`)
+        .pipe(sourcemaps.init())
         .pipe(sass({
             errLogToConsole: true,
             includePaths: [`${bootstrapSass}/`, `${awesomeSass}/`],
             precision: 8
         }))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(distCss)).
         pipe(browserSync.stream()); // We send the compiled source tu the navigator !!!
 });
