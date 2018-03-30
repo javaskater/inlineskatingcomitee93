@@ -81,4 +81,7 @@
 
 * Choosing a navbar whose font change from the default link
   * see [The Navbar in Bootstrap4](https://getbootstrap.com/docs/4.0/components/navbar/)
+### Walker
+
+* test the walker to understand how to replace ul by [div with reference to the parent a](https://getbootstrap.com/docs/4.0/components/navbar/#supported-content)!!! 
 

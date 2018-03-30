@@ -1,6 +1,5 @@
 //libraries I need ...
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');// To hellp have a map file that will help FF to retrive the original ssass files
 var sass = require('gulp-sass');
 
@@ -34,8 +33,7 @@ gulp.task('sass', function () {
             precision: 8
         }))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(distCss)).
-        pipe(browserSync.stream()); // We send the compiled source tu the navigator !!!
+        .pipe(gulp.dest(distCss)); // We send the compiled source tu the navigator !!!
 });
 
 
@@ -45,32 +43,10 @@ const srcBtsrap = 'node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 const srcJQ = 'node_modules/jquery/dist/jquery.js';
 gulp.task('js', function() {
     return gulp.src([srcBtsrap, srcJQ])
-        .pipe(gulp.dest(distJs))
-        .pipe(browserSync.stream()); // on fournit les nouvelles sources au navigateur !!!
+        .pipe(gulp.dest(distJs)); // on fournit les nouvelles sources au navigateur !!!
 });
 
-const srcHtml = 'app/**/*.html';
-const distHml = destSources;
-
-gulp.task('html', function() {
-    return gulp.src(srcHtml)
-        .pipe(gulp.dest(distHml))
-        .pipe(browserSync.stream()); // on fournit les nouvelles sources au navigateur !!!
-});
-/*
-* adding the browsersync !!!!
-* from https://browsersync.io/docs/gulp#gulp-sass-css
- */
-//définition d'une tache d'inistalisation du serveur de ressources statiques
-gulp.task('browser-static-ressources', function() {
-    browserSync.init({
-        server: {
-            baseDir: destSources //c'est à partir de ce répertoire que dans notre index.html on définit les chemins des ressources appelées
-        },
-    })
-})
-
-gulp.task('dist',['sass','js','html','browser-static-ressources']);
+gulp.task('dist',['sass','js']);
 
 
 
@@ -81,13 +57,7 @@ gulp.task('dist',['sass','js','html','browser-static-ressources']);
 gulp.task('serve', ['dist'], function (){
     gulp.watch(srcSass, ['sass']);
     // Other watchers
-    gulp.watch(srcJs, ['js']);
-    var htmlWatcher = gulp.watch(srcHtml,['html']);
-    //htmlWatcher.on('change', browserSync.reload);
 })
-
-
-
 
 /*
 * Defining a default task !!!

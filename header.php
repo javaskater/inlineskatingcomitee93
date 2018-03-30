@@ -24,7 +24,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 	<header id="masthead" class="container-fluid site-header navbar-static-top" role="banner">
-        <nav class="navbar navbar-expand-lg mr-auto bg_cdrs93" role="navigation">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
                 <div class="navbar-brand">
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                         <a href="<?php echo esc_url( home_url( '/' )); ?>">
@@ -56,9 +56,9 @@
                     ));
                     ?> 
                     <!--copy of themes/newspaper-x/searchform.php--> 
-                    <form role="search" method="get" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                        <input class="form-control mr-sm-2" name="s" type="search" type="<?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?>" placeholder="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>" aria-label="Rechercher">
-                        <button class="btn btn-outline-success btn_cdrs my-2 my-sm-0" type="submit"><span class="fa fa-search"></span> <?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?></button>
+                    <form role="search" method="get" class="form-inline my-2 my-lg-0" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <input class="form-control mr-sm-2" name="s" type="search" placeholder="<?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?>" placaria-label="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?></button>
                     </form>
                 </div>
             </nav>
