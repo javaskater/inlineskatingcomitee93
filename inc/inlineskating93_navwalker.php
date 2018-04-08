@@ -219,7 +219,7 @@ class linlineskating93_navwalker extends Walker_Nav_Menu {
                 $fb_output .= '>';
             }
 
-            $fb_output .= '<ul';
+            $fb_output .= '<div';
 
             if ( $menu_id )
                 $fb_output .= ' id="' . $menu_id . '"';

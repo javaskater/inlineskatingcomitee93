@@ -21,20 +21,18 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 	<header id="masthead" class="container-fluid site-header navbar-static-top" role="banner">
         <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
-                <div class="navbar-brand">
-                    <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
-                        <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-                        </a>
-                    <?php else : ?>
-                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
-                    <?php endif; ?>
+                <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
+                    <a href="<?php echo esc_url( home_url( '/' )); ?>" class="navbar-brand">
+                        <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                    </a>
+                <?php else : ?>
+                    <a class="site-title navbar-brand" href="<?php echo esc_url( home_url( '/' ));?>"><?php esc_url(bloginfo('name')); ?></a>
+                <?php endif; ?>
 
-                </div>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -51,6 +49,8 @@
                     'menu_id'         => false,
                     'menu_class'      => 'navbar-nav mr-auto',
                     'depth'           => 3,
+                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                    //'items_wrap' => '<div id="%1$s" class="%2$s" aria-labelledby="navbarDropdown">%3$s</div>',
                     'fallback_cb'     => 'linlineskating93_navwalker::fallback',
                     'walker'          => new linlineskating93_navwalker()
                     ));
