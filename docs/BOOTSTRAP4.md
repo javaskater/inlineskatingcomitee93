@@ -84,4 +84,7 @@
 ### Walker
 
 * test the walker to understand how to replace ul by [div with reference to the parent a](https://getbootstrap.com/docs/4.0/components/navbar/#supported-content)!!! 
+* The Guys wo made the Wlaker mde himself a [walker](http://simonpadbury.github.io/2016/03/09/bootstrap-4-navbar-with-dropdowns-for-wordpress.html)
+  * It is about his [navbar on GitHub](https://github.com/SimonPadbury/b4st/blob/master/functions/navbar.php)
+
 
