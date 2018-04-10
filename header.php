@@ -39,22 +39,18 @@
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                    <?php
-                    wp_nav_menu(array(
-                    //'theme_location'    => 'primary',
-                    'container'       => false,
-                    //'container_id'    => 'navbarSupportedContent',
-                    //'container_class' => 'collapse navbar-collapse',
-                    'menu_id'         => false,
-                    'menu_class'      => 'navbar-nav mr-auto',
-                    'depth'           => 3,
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    //'items_wrap' => '<div id="%1$s" class="%2$s" aria-labelledby="navbarDropdown">%3$s</div>',
-                    'fallback_cb'     => 'linlineskating93_navwalker::fallback',
-                    'walker'          => new linlineskating93_navwalker()
-                    ));
-                    ?> 
+                <div class="collapse navbar-collapse" id="navbarDropdown">
+                  <?php // taken from https://github.com/SimonPadbury/b4st/blob/master/header.php
+                    wp_nav_menu( array(
+                      'theme_location'  => 'primary',
+                      'container'       => false,
+                      'menu_class'      => '',
+                      'fallback_cb'     => '__return_false',
+                      'items_wrap'      => '<ul id="%1$s" class="navbar-nav mr-auto mt-2 mt-lg-0 %2$s">%3$s</ul>',
+                      'depth'           => 2,
+                      'walker'          => new linlineskating93_navwalker()
+                    ) );
+                  ?>
                     <!--copy of themes/newspaper-x/searchform.php--> 
                     <form role="search" method="get" class="form-inline my-2 my-lg-0" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                         <input class="form-control mr-sm-2" name="s" type="search" placeholder="<?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?>" placaria-label="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>">
