@@ -40,16 +40,18 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarDropdown">
-                  <?php // taken from https://github.com/SimonPadbury/b4st/blob/master/header.php
-                    wp_nav_menu( array(
-                      'theme_location'  => 'primary',
-                      'container'       => false,
-                      'menu_class'      => '',
-                      'fallback_cb'     => '__return_false',
-                      'items_wrap'      => '<ul id="%1$s" class="navbar-nav mr-auto mt-2 mt-lg-0 %2$s">%3$s</ul>',
-                      'depth'           => 2,
-                      'walker'          => new linlineskating93_navwalker()
-                    ) );
+                  <?php // taken directly from https://github.com/jprieton/wp-bootstrap4-navwalker
+                        wp_nav_menu( array(
+                            'menu'              => 'primary',
+                            'theme_location'    => 'primary',
+                            'depth'             => 2,
+                            'container'         => 'div',
+                            'container_class'   => 'collapse navbar-collapse',
+                            'container_id'      => 'bs-example-navbar-collapse-1',
+                            'menu_class'        => 'nav navbar-nav',
+                            'fallback_cb'       => 'WP_Bootstrap_Navwalker_GitHub::fallback',
+                            'walker'            => new WP_Bootstrap_Navwalker_GitHub())
+                        );
                   ?>
                     <!--copy of themes/newspaper-x/searchform.php--> 
                     <form role="search" method="get" class="form-inline my-2 my-lg-0" action="<?php echo esc_url( home_url( '/' ) ); ?>">

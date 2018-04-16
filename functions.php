@@ -231,8 +231,12 @@ function inlineskatingcomitee93_password_form() {
 add_filter( 'the_password_form', 'inlineskatingcomitee93_password_form' );
 
 /**
- * Load custom WordPress nav walker.
+ * Load the https://github.com/jprieton/wp-bootstrap4-navwalker NavWalker.
  */
-if ( ! class_exists( 'inlineskating93_navwalker' )) {
-	require_once(get_stylesheet_directory().'/inc/inlineskating93_navwalker.php');
+if ( ! file_exists( get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php' ) ) {
+    // file does not exist... return an error.
+    return new WP_Error( 'wp-bootstrap-navwalker_github-missing', __( 'It appears the wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+    // file exists... require it.
+    require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 }

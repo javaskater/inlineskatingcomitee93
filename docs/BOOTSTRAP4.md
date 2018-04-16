@@ -81,10 +81,16 @@
 
 * Choosing a navbar whose font change from the default link
   * see [The Navbar in Bootstrap4](https://getbootstrap.com/docs/4.0/components/navbar/)
-### Walker
+
+### unsuccessfull Walker
 
 * test the walker to understand how to replace ul by [div with reference to the parent a](https://getbootstrap.com/docs/4.0/components/navbar/#supported-content)!!! 
 * The Guys wo made the Wlaker mde himself a [walker](http://simonpadbury.github.io/2016/03/09/bootstrap-4-navbar-with-dropdowns-for-wordpress.html)
   * It is about his [navbar on GitHub](https://github.com/SimonPadbury/b4st/blob/master/functions/navbar.php)
+
+### [Walker for Bootstrap4](https://github.com/jprieton/wp-bootstrap4-navwalker)
+
+* This Walker for Bootstrap 4 seems to be the solution <https://github.com/jprieton/wp-bootstrap4-navwalker>
+* I use it directly following the [README.md file](https://github.com/jprieton/wp-bootstrap4-navwalker/blob/master/README.md)
 
 
