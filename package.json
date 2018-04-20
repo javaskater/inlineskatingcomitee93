@@ -26,11 +26,11 @@
   },
   "homepage": "https://github.com/javaskater/inlineskatingcomitee93#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "jquery": "^3.3.1"
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
   },
   "devDependencies": {
-    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-cli": "^2.0.1",
     "gulp-sass": "^3.1.0",

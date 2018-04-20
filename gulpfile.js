@@ -18,7 +18,7 @@ gulp.task('hello', function() {
 // The variables !!!
 const srcSass = 'app/scss/**/*.scss';
 const bootstrapSass = 'node_modules/bootstrap/scss';
-const awesomeSass = 'node_modules/font-awesome/scss';
+//const awesomeSass = 'node_modules/font-awesome/scss';
 const destSources = 'dist';
 const distCss = destSources +'/css';
 const distJs = destSources +'/js';
@@ -29,7 +29,8 @@ gulp.task('sass', function () {
         .pipe(sourcemaps.init())
         .pipe(sass({
             errLogToConsole: true,
-            includePaths: [`${bootstrapSass}/`, `${awesomeSass}/`],
+            //includePaths: [`${bootstrapSass}/`, `${awesomeSass}/`],
+            includePaths: [`${bootstrapSass}/`],
             precision: 8
         }))
         .pipe(sourcemaps.write('.'))

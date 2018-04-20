@@ -20,6 +20,11 @@
       z-index: 1;
         //}
     }
+    a.nav-link {
+      border-right: 1px solid rgba(92,92,92,0.5);
+      -webkit-transform: skewX(-15deg);
+      transform: skewX(-15deg);
+    }
     .site-footer {
       background-color: $my_footer_bg;
       //&:before {
@@ -41,7 +46,7 @@
     h1, h2 {
       //line-height: 1;
       //font-size: 4rem;
-      color: $navbar-light-active-color;
+      color: $cd93_bg_base;
       //margin: 0 0 1rem;
       //border: 0;
       //padding: 0;
@@ -213,7 +218,7 @@
   --------------------------------------------------------------*/
   footer {
     color: $navbar-light-active-color;
-    background-color: $c93_bg;
+    background-color: $cd93_bg;
     .credits {
       font-size: 1.2rem;
       margin-bottom: 0;

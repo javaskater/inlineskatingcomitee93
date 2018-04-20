@@ -22,8 +22,8 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="masthead" class="container-fluid site-header navbar-static-top" role="banner">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
+	<header id="masthead" class="site-header navbar-static-top" role="banner">
+        <nav class="container-fluid navbar navbar-expand-lg navbar-light bg-lcd93" role="navigation">
                 <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                     <a href="<?php echo esc_url( home_url( '/' )); ?>" class="navbar-brand">
                         <img src="<?php echo esc_attr(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
@@ -55,8 +55,8 @@
                   ?>
                     <!--copy of themes/newspaper-x/searchform.php--> 
                     <form role="search" method="get" class="form-inline my-2 my-lg-0" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                        <input class="form-control mr-sm-2" name="s" type="search" placeholder="<?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?>" placaria-label="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> <?php echo esc_html__( 'Search for:', 'inlineskatingcomitee93' ) ?></button>
+                        <input class="form-control mr-sm-2" name="s" type="search" placeholder="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>" placaria-label="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>">
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit"> <?php echo esc_html__( 'Search', 'inlineskatingcomitee93' ) ?></button>
                     </form>
                 </div>
             </nav>

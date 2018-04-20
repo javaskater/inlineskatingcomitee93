@@ -7,25 +7,30 @@
 //
 // Color system
 //
-$black: #1b1b52;
-$nav_base:green;
-$c93_bg: #f0e98b; // see http://parcsinfo.seine-saint-denis.fr/
+//$black: #1b1b52;
+//$nav_base:green;
+$cd93_bg_base: #f0e98b; // see http://parcsinfo.seine-saint-denis.fr/
 //$c93_bg: #E0D9CF; // see http://seinesaintdenis.fr/
-$my_dropdown-bg: $c93_bg;
-$my_footer_bg: lighten($c93_bg,15%);
-$btn_cdrs_color: darken($c93_bg,10%);
+//$my_dropdown-bg: $c93_bg;
+$cd93_bg: lighten($cd93_bg_base,15%);
+$theme-colors: (
+  "lcd93": $cd93_bg
+);
+$dropdown-bg: $cd93_bg;
+$my_footer_bg: $cd93_bg;
+//$btn_cdrs_color: darken($c93_bg,10%);
 //$body_bg: lighten($c93_bg,30%); //to change for something more http://parcsinfo.seine-saint-denis.fr/-Les-parcs-.html
-$dropdown-bg: $my_dropdown-bg; //used in bootstrap/dropdown.scss
+//$dropdown-bg: $my_dropdown-bg; //used in bootstrap/dropdown.scss
 //@debug "background-color: #{$body_bg}";
-$dropdown-link-hover-bg: $c93_bg;
+//$dropdown-link-hover-bg: $c93_bg;
 
 
-$navbar-light-color:                rgba($nav_base, .5) !default;
-$navbar-light-hover-color:          rgba($nav_base, .7) !default;
-$navbar-light-active-color:         rgba($nav_base, .9) !default;
-$navbar-light-disabled-color:       rgba($nav_base, .3) !default;
+//$navbar-light-color:                rgba($nav_base, .5) !default;
+//$navbar-light-hover-color:          rgba($nav_base, .7) !default;
+//$navbar-light-active-color:         rgba($nav_base, .9) !default;
+//$navbar-light-disabled-color:       rgba($nav_base, .3) !default;
 //$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-$navbar-light-toggler-border-color: rgba($nav_base, .1) !default;
+//$navbar-light-toggler-border-color: rgba($nav_base, .1) !default;
 
 
 //$dropdown-link-hover-color:darken($navbar-light-color,20%);
