@@ -10,7 +10,7 @@
   }
 }
 
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(md) {
     body.home{
       background-color: transparent;
       //&:before {

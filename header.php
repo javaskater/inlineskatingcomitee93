@@ -34,31 +34,31 @@
 
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false"
+                        data-target="#navbarDropdown"
+                        aria-controls="navbarDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarDropdown">
-                  <?php // taken directly from https://github.com/jprieton/wp-bootstrap4-navwalker
+                  <?php // copy from https://github.com/jprieton/wp-bootstrap4-navwalker
+                        $form_html = "<form role=\"search\" method=\"get\" class=\"form-inline my-2 my-lg-0\" action=\"".esc_url( home_url( '/' ) )."\">";
+                        $form_html .=  "<input class=\"form-control mr-sm-2\" name=\"s\" type=\"search\" placeholder=\"".esc_html__( 'Search...', 'inlineskatingcomitee93' )."\" placaria-label=\"".esc_html__( 'Search...', 'inlineskatingcomitee93' )."\">";
+                        $form_html .=  "<button class=\"btn btn-outline-info my-2 my-sm-0\" type=\"submit\">".esc_html__( 'Search', 'inlineskatingcomitee93' )."</button>";
+                        $form_html .= "</form>";
                         wp_nav_menu( array(
                             'menu'              => 'primary',
                             'theme_location'    => 'primary',
                             'depth'             => 2,
                             'container'         => 'div',
                             'container_class'   => 'collapse navbar-collapse',
-                            'container_id'      => 'bs-example-navbar-collapse-1',
-                            'menu_class'        => 'nav navbar-nav',
+                            'container_id'      => 'navbarDropdown',
+                            'menu_class'        => 'navbar-nav mr-auto',
                             'fallback_cb'       => 'WP_Bootstrap_Navwalker_GitHub::fallback',
-                            'walker'            => new WP_Bootstrap_Navwalker_GitHub())
+                            // https://wordpress.stackexchange.com/questions/19245/any-docs-for-wp-nav-menus-items-wrap-argument/19247
+                            'items_wrap'        => '<div id="%1$s" class="%2$s">%3$s</div>'.$form_html,
+                            'walker'            => new WP_Bootstrap_Navwalker_GitHub()
+                            )
                         );
                   ?>
-                    <!--copy of themes/newspaper-x/searchform.php--> 
-                    <form role="search" method="get" class="form-inline my-2 my-lg-0" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                        <input class="form-control mr-sm-2" name="s" type="search" placeholder="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>" placaria-label="<?php echo esc_html__( 'Search...', 'inlineskatingcomitee93' ) ?>">
-                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit"> <?php echo esc_html__( 'Search', 'inlineskatingcomitee93' ) ?></button>
-                    </form>
-                </div>
             </nav>
 	</header><!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>

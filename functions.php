@@ -187,7 +187,7 @@ function inlineskatingcomitee93_scripts() {
     wp_script_add_data( 'html5hiv', 'conditional', 'lt IE 9' );
 
 	// load bootstrap js
-	wp_enqueue_script('inlineskatingcomitee93-jquery', get_stylesheet_directory_uri() . '/dist/jquery.js', array() );
+	wp_enqueue_script('inlineskatingcomitee93-jquery', get_stylesheet_directory_uri() . '/dist/js/jquery.js', array() );
 	//the bootstrap-bundle now includes popper.js, no need to add it apart
 	wp_enqueue_script('inlineskatingcomitee93-bootstrapjs', get_stylesheet_directory_uri() . '/dist/js/bootstrap.bundle.js', array('inlineskatingcomitee93-jquery') );
 	wp_enqueue_script( 'inlineskatingcomitee93-skip-link-focus-fix', get_stylesheet_directory_uri() . '/inc/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
