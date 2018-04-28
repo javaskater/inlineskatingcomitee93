@@ -14,7 +14,7 @@
     body.home{
       background-color: transparent;
       //&:before {
-      background-image: url('../images/cdrs93_transparent.png');
+      background-image: url('../img/cdrs93_transparent.png');
       background-repeat: no-repeat;
       background-size: 100%;
       z-index: 1;
@@ -28,7 +28,7 @@
     .site-footer {
       background-color: $my_footer_bg;
       //&:before {
-      background-image: url('../images/footer_cdrs.png');
+      background-image: url('../img/footer_cdrs.png');
       background-repeat: no-repeat;
       min-height: 400px;
       background-position: center;

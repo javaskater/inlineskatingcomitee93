@@ -21,9 +21,8 @@ const bootstrapSass = 'node_modules/bootstrap/scss';
 //const awesomeSass = 'node_modules/font-awesome/scss';
 const destSources = 'dist';
 const distCss = destSources +'/css';
-const distJs = destSources +'/js';
 
-// Task for compiling sass to css
+// Task for compiling sass to css into dist/css/** */
 gulp.task('sass', function () {
     return gulp.src(`${srcSass}`)
         .pipe(sourcemaps.init())
@@ -38,16 +37,25 @@ gulp.task('sass', function () {
 });
 
 
-// Move the javascript files into our /src/js folder
+// Move the javascript files into our /dist/js folder
 const srcJs = 'app/js/**/*.js';
 const srcBtsrap = 'node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 const srcJQ = 'node_modules/jquery/dist/jquery.js';
+const distJs = destSources +'/js';
 gulp.task('js', function() {
     return gulp.src([srcBtsrap, srcJQ])
         .pipe(gulp.dest(distJs)); // on fournit les nouvelles sources au navigateur !!!
 });
 
-gulp.task('dist',['sass','js']);
+// Move the images files into our /dist/img folder
+const srcImg = 'images/*.*';
+const distImg = destSources +'/img';
+gulp.task('img', function() {
+    return gulp.src([srcImg])
+        .pipe(gulp.dest(distImg)); // on fournit les nouvelles sources au navigateur !!!
+});
+
+gulp.task('dist',['sass','js','img']);
 
 
 

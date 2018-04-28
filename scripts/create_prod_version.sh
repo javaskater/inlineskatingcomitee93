@@ -1,5 +1,7 @@
 #!/bin/bash
 
+node_version="8.11.1"
+
 init_repertoire=$(pwd)
 projet_repertoire=$(dirname $init_repertoire)
 archive_repertoire=$(dirname $projet_repertoire)/tmp
@@ -32,18 +34,23 @@ echo $(pwd)
 
 #change to the latest node/npm versions !!!
 . ~/.nvm/nvm.sh #see https://unix.stackexchange.com/questions/184508/nvm-command-not-available-in-bash-script
-nvm use v8.9.3
+nvm use "v${node_version}"
 #add grunt tooling project
-npm install
+
 ## remove odl tools
 if [ -d "node_modules" ]; then
-  npm run uninstall-tools
+  rm -rf node_modules
 fi
-## install all the tools
-npm run install-tools
-# compile compressed styles.css
-npm run grunt package
+## install all the tools and libraries
+npm install
 
+#launch the creation ot he assets distribution
+npm run gulp dist
+
+# we do'nt want to bring the tooling to the prod website
+if [ -d "node_modules" ]; then
+  rm -rf node_modules
+fi
 
 cd $archive_repertoire
 

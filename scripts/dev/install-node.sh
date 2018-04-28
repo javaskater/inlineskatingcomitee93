@@ -10,7 +10,7 @@ fi
 if [ ! -d "$HOME/.nvm" ]; then
   # from the Github prroject https://github.com/creationix/nvm (maintaining multiple versions of NodeJS)
   echo "Downloading and installing nvm"
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/b546436113084d6de584c57b259b947dd467a900/install.sh   | bash
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh   | bash
 fi
 
 NODE_VERSION=$1
