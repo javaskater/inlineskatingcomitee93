@@ -10,6 +10,15 @@
   }
 }
 
+@include media-breakpoint-down(sm) {
+
+	img{
+		max-width: 100%;
+		height:auto;
+	}
+
+}
+
 @include media-breakpoint-up(md) {
     body.home{
       background-color: transparent;
