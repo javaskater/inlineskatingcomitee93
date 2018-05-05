@@ -1,0 +1,880 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>/home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/docs/.NODE.md.html</title>
+
+
+<style type="text/css">
+body {
+	color: #333;
+	font: 13px/1.4 "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	background: transparent;
+	color: #4183c4;
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+	outline: 0 none;
+	text-decoration: underline;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+small {
+	font-size: 80%;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+img {
+	border: 0 none;
+}
+svg:not(:root) {
+	overflow: hidden;
+}
+figure {
+	margin: 1em 40px;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace,monospace;
+	font-size: 1em;
+}
+
+pre {
+	overflow: auto;
+	font: 12px Consolas,"Liberation Mono",Menlo,Courier,monospace;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.markdown-body {
+	padding: 30px;
+	font-size: 16px;
+	line-height: 1.6;
+	word-wrap: break-word;
+}
+
+.markdown-body>*:first-child {
+	margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+	margin-bottom: 0 !important;
+}
+
+.markdown-body .absent {
+	color: #c00;
+}
+
+.markdown-body .anchor {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	padding-right: 6px;
+	padding-left: 30px;
+	margin-left: -30px;
+}
+
+.markdown-body .anchor:focus {
+	outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+	position: relative;
+	margin-top: 1em;
+	margin-bottom: 16px;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+	display: none;
+	color: #000;
+	vertical-align: middle;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+	padding-left: 8px;
+	margin-left: -30px;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+	display: inline-block;
+}
+
+.markdown-body h1 tt,
+.markdown-body h1 code,
+.markdown-body h2 tt,
+.markdown-body h2 code,
+.markdown-body h3 tt,
+.markdown-body h3 code,
+.markdown-body h4 tt,
+.markdown-body h4 code,
+.markdown-body h5 tt,
+.markdown-body h5 code,
+.markdown-body h6 tt,
+.markdown-body h6 code {
+	font-size: inherit;
+}
+
+.markdown-body h1 {
+	padding-bottom: 0.3em;
+	font-size: 2.25em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.75em;
+	line-height: 1.225;
+	border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+	font-size: 1.5em;
+	line-height: 1.43;
+}
+
+.markdown-body h4 {
+	font-size: 1.25em;
+}
+
+.markdown-body h5 {
+	font-size: 1em;
+}
+
+.markdown-body h6 {
+	font-size: 1em;
+	color: #777;
+}
+
+.markdown-body p,.markdown-body blockquote,
+.markdown-body ul,.markdown-body ol,
+.markdown-body dl,.markdown-body table,
+.markdown-body pre {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.markdown-body hr {
+	height: 4px;
+	padding: 0;
+	margin: 16px 0;
+	background-color: #e7e7e7;
+	border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+	padding-left: 2em;
+}
+
+.markdown-body ul.no-list,
+.markdown-body ol.no-list {
+	padding: 0;
+	list-style-type: none;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.markdown-body li>p {
+	margin-top: 16px;
+}
+
+.markdown-body dl {
+	padding: 0;
+}
+
+.markdown-body dl dt {
+	padding: 0;
+	margin-top: 16px;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.markdown-body dl dd {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+	padding: 0 15px;
+	color: #777;
+	border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+	margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+	margin-bottom: 0;
+}
+
+.markdown-body table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	word-break: keep-all;
+}
+
+.markdown-body table th {
+	font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+	padding: 6px 13px;
+	border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+	background-color: #fff;
+	border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+	background-color: #f8f8f8;
+}
+
+.markdown-body img {
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.markdown-body span.frame {
+	display: block;
+	overflow: hidden;
+}
+
+.markdown-body span.frame>span {
+	display: block;
+	float: left;
+	width: auto;
+	padding: 7px;
+	margin: 13px 0 0;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
+
+.markdown-body span.frame span img {
+	display: block;
+	float: left;
+}
+
+.markdown-body span.frame span span {
+	display: block;
+	padding: 5px 0 0;
+	clear: both;
+	color: #333;
+}
+
+.markdown-body span.align-center {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.markdown-body span.align-center>span {
+	display: block;
+	margin: 13px auto 0;
+	overflow: hidden;
+	text-align: center;
+}
+
+.markdown-body span.align-center span img {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.markdown-body span.align-right {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+
+.markdown-body span.align-right>span {
+	display: block;
+	margin: 13px 0 0;
+	overflow: hidden;
+	text-align: right;
+}
+
+.markdown-body span.align-right span img {
+	margin: 0;
+	text-align: right;
+}
+
+.markdown-body span.float-left {
+	display: block;
+	float: left;
+	margin-right: 13px;
+	overflow: hidden;
+}
+
+.markdown-body span.float-left span {
+	margin: 13px 0 0;
+}
+
+.markdown-body span.float-right {
+	display: block;
+	float: right;
+	margin-left: 13px;
+	overflow: hidden;
+}
+
+.markdown-body span.float-right>span {
+	display: block;
+	margin: 13px auto 0;
+	overflow: hidden;
+	text-align: right;
+}
+
+.markdown-body code,.markdown-body tt {
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(0,0,0,0.04);
+	border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after,
+.markdown-body tt:before,
+.markdown-body tt:after {
+	letter-spacing: -0.2em;
+	content: "\00a0";
+}
+
+.markdown-body code br,
+.markdown-body tt br {
+	display: none;
+}
+
+.markdown-body del code {
+	text-decoration: inherit;
+}
+
+.markdown-body pre>code {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	word-break: normal;
+	white-space: pre;
+	background: transparent;
+	border: 0;
+}
+
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f7f7f7;
+	border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+	margin-bottom: 0;
+	word-break: normal;
+}
+
+.markdown-body pre {
+	word-wrap: normal;
+}
+
+.markdown-body pre code,
+.markdown-body pre tt {
+	display: inline;
+	max-width: initial;
+	padding: 0;
+	margin: 0;
+	overflow: initial;
+	line-height: inherit;
+	word-wrap: normal;
+	background-color: transparent;
+	border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after,
+.markdown-body pre tt:before,
+.markdown-body pre tt:after {
+	content: normal;
+}
+
+.highlight .pl-coc,
+.highlight .pl-entl,
+.highlight .pl-entm,
+.highlight .pl-eoa,
+.highlight .pl-mai .pl-sf,
+.highlight .pl-mm,
+.highlight .pl-pdv,
+.highlight .pl-sc,
+.highlight .pl-som,
+.highlight .pl-sr,
+.highlight .pl-v,
+.highlight .pl-vpf {
+	color: #0086b3;
+}
+.highlight .pl-eoac,
+.highlight .pl-mdht,
+.highlight .pl-mi1,
+.highlight .pl-mri,
+.highlight .pl-va,
+.highlight .pl-vpu {
+	color: #008080;
+}
+.highlight .pl-c,
+.highlight .pl-pdc {
+	color: #b4b7b4;
+	font-style: italic;
+}
+.highlight .pl-k,
+.highlight .pl-ko,
+.highlight .pl-kolp,
+.highlight .pl-mc,
+.highlight .pl-mr,
+.highlight .pl-ms,
+.highlight .pl-s,
+.highlight .pl-sok,
+.highlight .pl-st {
+	color: #6e5494;
+}
+.highlight .pl-ef,
+.highlight .pl-enf,
+.highlight .pl-enm,
+.highlight .pl-entc,
+.highlight .pl-eoi,
+.highlight .pl-sf,
+.highlight .pl-smc {
+	color: #d12089;
+}
+.highlight .pl-ens,
+.highlight .pl-eoai,
+.highlight .pl-kos,
+.highlight .pl-mh .pl-pdh,
+.highlight .pl-mp,
+.highlight .pl-pde,
+.highlight .pl-stp {
+	color: #458;
+}
+.highlight .pl-enti {
+	color: #d12089;
+	font-weight: bold;
+}
+.highlight .pl-cce,
+.highlight .pl-enc,
+.highlight .pl-kou,
+.highlight .pl-mq {
+	color: #f93;
+}
+.highlight .pl-mp1 .pl-sf {
+	color: #458;
+	font-weight: bold;
+}
+.highlight .pl-cos,
+.highlight .pl-ent,
+.highlight .pl-md,
+.highlight .pl-mdhf,
+.highlight .pl-ml,
+.highlight .pl-pdc1,
+.highlight .pl-pds,
+.highlight .pl-s1,
+.highlight .pl-scp,
+.highlight .pl-sol {
+	color: #df5000;
+}
+.highlight .pl-c1,
+.highlight .pl-cn,
+.highlight .pl-pse,
+.highlight .pl-pse .pl-s2,
+.highlight .pl-vi {
+	color: #a31515;
+}
+.highlight .pl-mb,
+.highlight .pl-pdb {
+	color: #df5000;
+	font-weight: bold;
+}
+.highlight .pl-mi,
+.highlight .pl-pdi {
+	color: #6e5494;
+	font-style: italic;
+}
+.highlight .pl-ms1 {
+	background-color: #f5f5f5;
+}
+.highlight .pl-mdh,
+.highlight .pl-mdi {
+	font-weight: bold;
+}
+.highlight .pl-mdr {
+	color: #0086b3;
+	font-weight: bold;
+}
+.highlight .pl-s2 {
+	color: #333;
+}
+.highlight .pl-ii {
+	background-color: #df5000;
+	color: #fff;
+}
+.highlight .pl-ib {
+	background-color: #f93;
+}
+.highlight .pl-id {
+	background-color: #a31515;
+	color: #fff;
+}
+.highlight .pl-iu {
+	background-color: #b4b7b4;
+}
+.highlight .pl-mo {
+	color: #969896;
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+function getDocumentScrollTop() 
+{
+   var res = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
+   // alert(res);
+   return res;
+}
+
+function setDocumentScrollTop(ypos) 
+{
+	window.scrollTo(0, ypos);
+}
+
+</script>
+
+
+</head>
+<body class="markdown-body">
+<h2> <a id="resources-for-preparing-a-toolkit" class="anchor" href="#resources-for-preparing-a-toolkit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources for preparing a toolkit</h2> 
+<ul> 
+ <li>What I already started for <a href="https://github.com/javaskater/personal_portal">My Personal Portal</a> </li> 
+ <li>On the new <a href="https://github.com/acquia-pso/cog/">COG Starter theme for Drupal8</a> 
+  <ul> 
+   <li>There is <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/install-node.sh">a script for locally installing the Node Toolkit</a> </li> 
+   <li>Le fichier <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/package.json">package.json</a> est un tr&egrave;s bon exemple d'un tel outillage !</li> 
+  </ul> </li> 
+</ul> 
+<h3> <a id="install-nodesh-script" class="anchor" href="#install-nodesh-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>install-node.sh script:</h3> 
+<div class="highlight highlight-source-shell">
+ <pre>jpmena@jpmena-P34:<span class="pl-k">~</span>/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/scripts/dev$ ./install-node.sh 8.9.3
+Downloading and installing nvm
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12492  100 12492    0     0  12492      0  0:00:01 --:--:--  0:00:01 28520
+=<span class="pl-k">&gt;</span> Downloading nvm from git to <span class="pl-s"><span class="pl-pds">'</span>/home/jpmena/.nvm<span class="pl-pds">'</span></span>
+=<span class="pl-k">&gt;</span> Cloning into <span class="pl-s"><span class="pl-pds">'</span>/home/jpmena/.nvm<span class="pl-pds">'</span></span>...
+remote: Counting objects: 263, done.
+remote: Compressing objects: 100% (228/228), done.
+remote: Total 263 (delta 31), reused 107 (delta 25), pack-reused 0
+Receiving objects: 100% (263/263), 116.03 KiB <span class="pl-k">|</span> 377.00 KiB/s, done.
+Resolving deltas: 100% (31/31), done.
+Note: checking out <span class="pl-s"><span class="pl-pds">'</span>b546436113084d6de584c57b259b947dd467a900<span class="pl-pds">'</span></span>.
+
+You are <span class="pl-k">in</span> <span class="pl-s"><span class="pl-pds">'</span>detached HEAD<span class="pl-pds">'</span></span> state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make <span class="pl-k">in</span> this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+<span class="pl-k">do</span> so (now or later) by using -b with the checkout <span class="pl-c1">command</span> again. Example:
+
+  git checkout -b <span class="pl-k">&lt;</span>new-branch-name<span class="pl-k">&gt;</span>
+
+=<span class="pl-k">&gt;</span> Compressing and cleaning up git repository
+
+=<span class="pl-k">&gt;</span> Appending nvm <span class="pl-c1">source</span> string to /home/jpmena/.bashrc
+=<span class="pl-k">&gt;</span> Appending bash_completion <span class="pl-c1">source</span> string to /home/jpmena/.bashrc
+=<span class="pl-k">&gt;</span> You currently have modules installed globally with <span class="pl-s"><span class="pl-pds">`</span>npm<span class="pl-pds">`</span></span>. These will no
+=<span class="pl-k">&gt;</span> longer be linked to the active version of Node when you install a new node
+=<span class="pl-k">&gt;</span> with <span class="pl-s"><span class="pl-pds">`</span>nvm<span class="pl-pds">`</span></span><span class="pl-k">;</span> and they may (depending on how you construct your <span class="pl-s"><span class="pl-pds">`</span><span class="pl-smi">$PATH</span><span class="pl-pds">`</span></span>)
+=<span class="pl-k">&gt;</span> override the binaries of modules installed with <span class="pl-s"><span class="pl-pds">`</span>nvm<span class="pl-pds">`</span></span>:
+
+/usr/local/lib
+├── bower@1.8.2
+├── grunt-cli@1.2.0
+=<span class="pl-k">&gt;</span> If you wish to uninstall t<span class="pl-s"><span class="pl-pds">`</span><span class="pl-pds">`</span><span class="pl-pds">`</span>hem at a later point (or re-install them under your</span>
+<span class="pl-s">=<span class="pl-k">&gt;</span> <span class="pl-s"><span class="pl-pds">`</span>nvm<span class="pl-pds">`</span></span> Nodes), you can remove them from the system Node as follows:</span>
+<span class="pl-s"></span>
+<span class="pl-s">     $ nvm use system</span>
+<span class="pl-s">     $ npm uninstall -g a_module</span>
+<span class="pl-s"></span>
+<span class="pl-s">=<span class="pl-k">&gt;</span> Close and reopen your terminal to start using nvm or run the following to use it now:</span>
+<span class="pl-s"></span>
+<span class="pl-s"><span class="pl-k">export</span> NVM_DIR=<span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-smi">$HOME</span>/.nvm<span class="pl-pds">&quot;</span></span></span>
+<span class="pl-s">[ <span class="pl-k">-s</span> <span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-smi">$NVM_DIR</span>/nvm.sh<span class="pl-pds">&quot;</span></span> ] <span class="pl-k">&amp;&amp;</span> <span class="pl-cce">\.</span> <span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-smi">$NVM_DIR</span>/nvm.sh<span class="pl-pds">&quot;</span></span>  <span class="pl-c"><span class="pl-c">#</span> This loads nvm</span></span>
+<span class="pl-s"><span class="pl-c">[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot; # This loads nvm bash_completion</span></span>
+<span class="pl-s"><span class="pl-c">Downloading and installing node version 8.9.3</span></span>
+<span class="pl-s"><span class="pl-c"></span></span>
+<span class="pl-s"><span class="pl-c">Node Version Manager</span></span>
+<span class="pl-s"><span class="pl-c"></span></span>
+<span class="pl-s"><span class="pl-c">Note: &lt;version&gt; refers to any version-like string nvm understands. This includes:</span></span>
+<span class="pl-s"><span class="pl-c"> - full or partial version numbers, starting with an optional &quot;v&quot; (0.10, v0.1.2, v1)</span></span>
+<span class="pl-s"><span class="pl-c"> - default (built-in) aliases: node, stable, unstable, iojs, system</span></span>
+<span class="pl-s"><span class="pl-c"> - custom aliases you define with </span><span class="pl-pds">`</span></span>nvm <span class="pl-c1">alias</span> foo<span class="pl-s"><span class="pl-pds">`</span></span>
+<span class="pl-s"></span>
+<span class="pl-s"> Any options that produce colorized output should respect the <span class="pl-pds">`</span></span>--no-colors<span class="pl-s"><span class="pl-pds">`</span> option.</span>
+<span class="pl-s"></span>
+<span class="pl-s">Usage:</span>
+<span class="pl-s">  nvm --help                                Show this message</span>
+<span class="pl-s">  nvm --version                             Print out the installed version of nvm</span>
+<span class="pl-s">  nvm install [-s] <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>                Download and install a <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>, [-s] from source. Uses .nvmrc <span class="pl-k">if</span> available</span>
+<span class="pl-s">    --reinstall-packages-from=<span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>     When installing, reinstall packages installed <span class="pl-k">in</span> <span class="pl-k">&lt;</span>node<span class="pl-k">|</span>iojs<span class="pl-k">|</span>node version number<span class="pl-k">&gt;</span></span>
+<span class="pl-s">    --lts                                   When installing, only <span class="pl-k">select</span> <span class="pl-smi">from</span> LTS (long-term support) versions</span>
+<span class="pl-s">    --lts=<span class="pl-k">&lt;</span>LTS name<span class="pl-k">&gt;</span>                        When installing, only <span class="pl-k">select</span> <span class="pl-smi">from</span> versions <span class="pl-k">for</span> a specific LTS line</span>
+<span class="pl-s">    --skip-default-packages                 When installing, skip the default-packages file <span class="pl-k">if</span> it exists</span>
+<span class="pl-s">    --latest-npm                            After installing, attempt to upgrade to the latest working npm on the given node version</span>
+<span class="pl-s">  nvm uninstall <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>                   Uninstall a version</span>
+<span class="pl-s">  nvm uninstall --lts                       Uninstall using automatic LTS (long-term support) <span class="pl-c1">alias</span> <span class="pl-s"><span class="pl-pds">`</span>lts/<span class="pl-k">*</span><span class="pl-pds">`</span></span>, <span class="pl-k">if</span> available.</span>
+<span class="pl-s">  nvm uninstall --lts=<span class="pl-k">&lt;</span>LTS name<span class="pl-k">&gt;</span>            Uninstall using automatic <span class="pl-c1">alias</span> <span class="pl-k">for</span> provided LTS line, <span class="pl-k">if</span> available.</span>
+<span class="pl-s">  nvm use [--silent] <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>              Modify PATH to use <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>. Uses .nvmrc <span class="pl-k">if</span> available</span>
+<span class="pl-s">    --lts                                   Uses automatic LTS (long-term support) <span class="pl-c1">alias</span> <span class="pl-s"><span class="pl-pds">`</span>lts/<span class="pl-k">*</span><span class="pl-pds">`</span></span>, <span class="pl-k">if</span> available.</span>
+<span class="pl-s">    --lts=<span class="pl-k">&lt;</span>LTS name<span class="pl-k">&gt;</span>                        Uses automatic <span class="pl-c1">alias</span> <span class="pl-k">for</span> provided LTS line, <span class="pl-k">if</span> available.</span>
+<span class="pl-s">  nvm <span class="pl-c1">exec</span> [--silent] <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span> [<span class="pl-k">&lt;</span>command<span class="pl-k">&gt;</span>] Run <span class="pl-k">&lt;</span>command<span class="pl-k">&gt;</span> on <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>. Uses .nvmrc <span class="pl-k">if</span> available</span>
+<span class="pl-s">    --lts                                   Uses automatic LTS (long-term support) <span class="pl-c1">alias</span> <span class="pl-s"><span class="pl-pds">`</span>lts/<span class="pl-k">*</span><span class="pl-pds">`</span></span>, <span class="pl-k">if</span> available.</span>
+<span class="pl-s">    --lts=<span class="pl-k">&lt;</span>LTS name<span class="pl-k">&gt;</span>                        Uses automatic <span class="pl-c1">alias</span> <span class="pl-k">for</span> provided LTS line, <span class="pl-k">if</span> available.</span>
+<span class="pl-s">  nvm run [--silent] <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span> [<span class="pl-k">&lt;</span>args<span class="pl-k">&gt;</span>]     Run <span class="pl-s"><span class="pl-pds">`</span>node<span class="pl-pds">`</span></span> on <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span> with <span class="pl-k">&lt;</span>args<span class="pl-k">&gt;</span> as arguments. Uses .nvmrc <span class="pl-k">if</span> available</span>
+<span class="pl-s">    --lts                                   Uses automatic LTS (long-term support) <span class="pl-c1">alias</span> <span class="pl-s"><span class="pl-pds">`</span>lts/<span class="pl-k">*</span><span class="pl-pds">`</span></span>, <span class="pl-k">if</span> available.</span>
+<span class="pl-s">    --lts=<span class="pl-k">&lt;</span>LTS name<span class="pl-k">&gt;</span>                        Uses automatic <span class="pl-c1">alias</span> <span class="pl-k">for</span> provided LTS line, <span class="pl-k">if</span> available.</span>
+<span class="pl-s">  nvm current                               Display currently activated version</span>
+<span class="pl-s">  nvm ls                                    List installed versions</span>
+<span class="pl-s">  nvm ls <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>                          List versions matching a given <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span></span>
+<span class="pl-s">  nvm ls-remote                             List remote versions available <span class="pl-k">for</span> install</span>
+<span class="pl-s">    --lts                                   When listing, only show LTS (long-term support) versions</span>
+<span class="pl-s">  nvm ls-remote <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>                   List remote versions available <span class="pl-k">for</span> install, matching a given <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span></span>
+<span class="pl-s">    --lts                                   When listing, only show LTS (long-term support) versions</span>
+<span class="pl-s">    --lts=<span class="pl-k">&lt;</span>LTS name<span class="pl-k">&gt;</span>                        When listing, only show versions <span class="pl-k">for</span> a specific LTS line</span>
+<span class="pl-s">  nvm version <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>                     Resolve the given description to a single <span class="pl-k">local</span> version</span>
+<span class="pl-s">  nvm version-remote <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>              Resolve the given description to a single remote version</span>
+<span class="pl-s">    --lts                                   When listing, only <span class="pl-k">select</span> <span class="pl-smi">from</span> LTS (long-term support) versions</span>
+<span class="pl-s">    --lts=<span class="pl-k">&lt;</span>LTS name<span class="pl-k">&gt;</span>                        When listing, only <span class="pl-k">select</span> <span class="pl-smi">from</span> versions <span class="pl-k">for</span> a specific LTS line</span>
+<span class="pl-s">  nvm deactivate                            Undo effects of <span class="pl-s"><span class="pl-pds">`</span>nvm<span class="pl-pds">`</span></span> on current shell</span>
+<span class="pl-s">  nvm <span class="pl-c1">alias</span> [<span class="pl-k">&lt;</span>pattern<span class="pl-k">&gt;</span>]                     Show all aliases beginning with <span class="pl-k">&lt;</span>pattern<span class="pl-k">&gt;</span></span>
+<span class="pl-s">  nvm <span class="pl-c1">alias</span> <span class="pl-k">&lt;</span>name<span class="pl-k">&gt;</span> <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>                Set an <span class="pl-c1">alias</span> named <span class="pl-k">&lt;</span>name<span class="pl-k">&gt;</span> pointing to <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span></span>
+<span class="pl-s">  nvm <span class="pl-c1">unalias</span> <span class="pl-k">&lt;</span>name<span class="pl-k">&gt;</span>                        Deletes the <span class="pl-c1">alias</span> named <span class="pl-k">&lt;</span>name<span class="pl-k">&gt;</span></span>
+<span class="pl-s">  nvm install-latest-npm                    Attempt to upgrade to the latest working <span class="pl-s"><span class="pl-pds">`</span>npm<span class="pl-pds">`</span></span> on the current node version</span>
+<span class="pl-s">  nvm reinstall-packages <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>          Reinstall global <span class="pl-s"><span class="pl-pds">`</span>npm<span class="pl-pds">`</span></span> packages contained <span class="pl-k">in</span> <span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span> to current version</span>
+<span class="pl-s">  nvm unload                                Unload <span class="pl-s"><span class="pl-pds">`</span>nvm<span class="pl-pds">`</span></span> from shell</span>
+<span class="pl-s">  nvm which [<span class="pl-k">&lt;</span>version<span class="pl-k">&gt;</span>]                     Display path to installed node version. Uses .nvmrc <span class="pl-k">if</span> available</span>
+<span class="pl-s">  nvm cache dir                             Display path to the cache directory <span class="pl-k">for</span> nvm</span>
+<span class="pl-s">  nvm cache clear                           Empty cache directory <span class="pl-k">for</span> nvm</span>
+<span class="pl-s"></span>
+<span class="pl-s">Example:</span>
+<span class="pl-s">  nvm install 8.0.0                     Install a specific version number</span>
+<span class="pl-s">  nvm use 8.0                           Use the latest available 8.0.x release</span>
+<span class="pl-s">  nvm run 6.10.3 app.js                 Run app.js using node 6.10.3</span>
+<span class="pl-s">  nvm <span class="pl-c1">exec</span> 4.8.3 node app.js            Run <span class="pl-s"><span class="pl-pds">`</span>node app.js<span class="pl-pds">`</span></span> with the PATH pointing to node 4.8.3</span>
+<span class="pl-s">  nvm <span class="pl-c1">alias</span> default 8.1.0               Set default node version on a shell</span>
+<span class="pl-s">  nvm <span class="pl-c1">alias</span> default node                Always default to the latest available node version on a shell</span>
+<span class="pl-s"></span>
+<span class="pl-s">Note:</span>
+<span class="pl-s">  to remove, delete, or uninstall nvm - just remove the <span class="pl-s"><span class="pl-pds">`</span><span class="pl-smi">$NVM_DIR</span><span class="pl-pds">`</span></span> folder (usually <span class="pl-s"><span class="pl-pds">`</span>~/.nvm<span class="pl-pds">`</span></span>)</span>
+<span class="pl-s"></span>
+<span class="pl-s">Downloading and installing node v8.9.3...</span>
+<span class="pl-s">Downloading https://nodejs.org/dist/v8.9.3/node-v8.9.3-linux-x64.tar.xz...</span>
+<span class="pl-s"><span class="pl-c"><span class="pl-c">#</span>####################################################################### 100.0%</span></span>
+<span class="pl-s">Computing checksum with sha256sum</span>
+<span class="pl-s">Checksums matched<span class="pl-k">!</span></span>
+<span class="pl-s">Now using node v8.9.3 (npm v5.5.1)</span>
+<span class="pl-s">Creating default alias: default -<span class="pl-k">&gt;</span> 8.9.3 (-<span class="pl-k">&gt;</span> v8.9.3)</span>
+<span class="pl-s">Please run the following command:</span>
+<span class="pl-s"><span class="pl-c1">source</span> <span class="pl-k">~</span>/.bashrc <span class="pl-k">&amp;&amp;</span> nvm use --delete-prefix 8.9.3</span>
+<span class="pl-s"><span class="pl-c"><span class="pl-c">#</span>I pass the corresponding commands</span></span>
+<span class="pl-s">jpmena@jpmena-P34:<span class="pl-k">~</span>/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/scripts/dev$ <span class="pl-c1">source</span> <span class="pl-k">~</span>/.bashrc <span class="pl-k">&amp;&amp;</span> nvm use --delete-prefix 8.9.3</span>
+<span class="pl-s">Now using node v8.9.3 (npm v5.5.1)</span></pre>
+</div> 
+<ul> 
+ <li> <a href="https://github.com/creationix/nvm">nvm</a> is to Nodejs what <a href="https://github.com/pypa/virtualenv">virtualenv</a> is to Python</li> 
+</ul> 
+<h3> <a id="nvm-usage" class="anchor" href="#nvm-usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/creationix/nvm">nvm</a> usage</h3> 
+<div class="highlight highlight-source-shell">
+ <pre><span class="pl-c"><span class="pl-c">#</span> which node versions are actually available through the Node Virtual Manager ?</span>
+<span class="pl-c"><span class="pl-c">#</span># type &quot;nvm help&quot; if you want the list of available commands !</span>
+jpmena@jpmena-P34:<span class="pl-k">~</span>/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ nvm ls
+-<span class="pl-k">&gt;</span>       v8.9.3
+         system
+default -<span class="pl-k">&gt;</span> 8.9.3 (-<span class="pl-k">&gt;</span> v8.9.3)
+node -<span class="pl-k">&gt;</span> stable (-<span class="pl-k">&gt;</span> v8.9.3) (default)
+stable -<span class="pl-k">&gt;</span> 8.9 (-<span class="pl-k">&gt;</span> v8.9.3) (default)
+iojs -<span class="pl-k">&gt;</span> N/A (default)
+lts/<span class="pl-k">*</span> -<span class="pl-k">&gt;</span> lts/carbon (-<span class="pl-k">&gt;</span> v8.9.3)
+lts/argon -<span class="pl-k">&gt;</span> v4.8.7 (-<span class="pl-k">&gt;</span> N/A)
+lts/boron -<span class="pl-k">&gt;</span> v6.12.2 (-<span class="pl-k">&gt;</span> N/A)
+lts/carbon -<span class="pl-k">&gt;</span> v8.9.3
+<span class="pl-c"><span class="pl-c">#</span> I decide to use the default version</span>
+jpmena@jpmena-P34:<span class="pl-k">~</span>/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ nvm use default 
+Now using node v8.9.3 (npm v5.5.1)
+<span class="pl-c"><span class="pl-c">#</span># I confirm the npm version ...</span>
+jpmena@jpmena-P34:<span class="pl-k">~</span>/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ npm --version
+5.5.1
+<span class="pl-c"><span class="pl-c">#</span># But also the node version (the nodejs version is only the one of the apt package) </span>
+jpmena@jpmena-P34:<span class="pl-k">~</span>/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ node --version
+v8.9.3</pre>
+</div> 
+<h2> <a id="using-bootstrap-with-sass" class="anchor" href="#using-bootstrap-with-sass" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Using Bootstrap with SASS:</h2> 
+<ul> 
+ <li> <a href="https://makina-corpus.com/blog/metier/2015/utiliser-bootstrap-avec-un-pre-processeur" rel="nofollow">This french Blog</a> seems to be a good tutorial</li> 
+ <li>A good <a href="https://coursetro.com/posts/design/73/How-to-Customize-Bootstrap-4-with-Sass" rel="nofollow">free video tutorial</a> 
+  <ul> 
+   <li>it explains also that default variables <em>!default</em> exist only if not redefined !!!</li> 
+  </ul> </li> 
+</ul> 
+<h3> <a id="adapting-stylesscss" class="anchor" href="#adapting-stylesscss" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adapting styles.scss</h3> 
+<div class="highlight highlight-source-shell">
+ <pre>jpmena@jpmena-P34:<span class="pl-k">~</span>/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93$ npm run grunt
+
+<span class="pl-k">&gt;</span> inlineskatingcomitee93@0.0.1 grunt /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93
+<span class="pl-k">&gt;</span> node node_modules/grunt-cli/bin/grunt
+
+Running <span class="pl-s"><span class="pl-pds">&quot;</span>watch<span class="pl-pds">&quot;</span></span> task
+Waiting...</pre>
+</div> 
+<h3> <a id="comparing-with-the-sources-at-node_modulesbootstrap" class="anchor" href="#comparing-with-the-sources-at-node_modulesbootstrap" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>comparing with the sources at node_modules/bootstrap</h3> 
+<ul> 
+ <li>installing the sources !!!</li> 
+</ul> 
+<div class="highlight highlight-source-shell">
+ <pre>jpmena@jpmena-P34:<span class="pl-k">~</span>/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap$ npm i
+npm WARN deprecated qunitjs@2.4.1: 2.4.1 is the last version where QUnit will be published as <span class="pl-s"><span class="pl-pds">'</span>qunitjs<span class="pl-pds">'</span></span>. To receive future updates, you will need to change the package name to <span class="pl-s"><span class="pl-pds">'</span>qunit<span class="pl-pds">'</span></span>.
+
+<span class="pl-k">&gt;</span> node-sass@4.7.2 install /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/node-sass
+<span class="pl-k">&gt;</span> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.7.2/linux-x64-57_binding.node
+Download <span class="pl-c1">complete</span>  ] - <span class="pl-c1">:</span>
+Binary saved to /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/node-sass/vendor/linux-x64-57/binding.node
+Caching binary to /home/jpmena/.npm/node-sass/4.7.2/linux-x64-57_binding.node
+
+<span class="pl-k">&gt;</span> phantomjs-prebuilt@2.1.16 install /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/phantomjs-prebuilt
+<span class="pl-k">&gt;</span> node install.js
+
+PhantomJS not found on PATH
+Downloading https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2
+Saving to /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2
+Receiving...
+  [<span class="pl-k">=======================================</span>-] 97%
+Received 22866K total.
+Extracting tar contents (via spawned process)
+Removing /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom
+Copying extracted folder /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2-extract-1512888808481/phantomjs-2.1.1-linux-x86_64 -<span class="pl-k">&gt;</span> /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom
+Writing location.js file
+Done. Phantomjs binary available at /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs
+
+<span class="pl-k">&gt;</span> node-sass@4.7.2 postinstall /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/node-sass
+<span class="pl-k">&gt;</span> node scripts/build.js
+
+Binary found at /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/node-sass/vendor/linux-x64-57/binding.node
+Testing binary
+Binary is fine
+
+<span class="pl-k">&gt;</span> nodemon@1.12.5 postinstall /home/jpmena/CDRS/wordpress/wp-content/themes/inlineskatingcomitee93/node_modules/bootstrap/node_modules/nodemon
+<span class="pl-k">&gt;</span> node -e <span class="pl-s"><span class="pl-pds">&quot;</span>console.log('\u001b[32mLove nodemon? You can now support the project via the open collective:\u001b[22m\u001b[39m\n &gt; \u001b[96m\u001b[1mhttps://opencollective.com/nodemon/donate\u001b[0m\n')<span class="pl-pds">&quot;</span></span>
+
+Love nodemon<span class="pl-k">?</span> You can now support the project via the open collective:
+ <span class="pl-k">&gt;</span> https://opencollective.com/nodemon/donate
+
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN bootstrap@4.0.0-beta.2 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN postcss-html@0.11.0 requires a peer of postcss-sass@<span class="pl-k">&gt;</span>=0.2.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="pl-k">for</span> fsevents@1.1.3: wanted {<span class="pl-s"><span class="pl-pds">&quot;</span>os<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>darwin<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>arch<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>any<span class="pl-pds">&quot;</span></span>} (current: {<span class="pl-s"><span class="pl-pds">&quot;</span>os<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>linux<span class="pl-pds">&quot;</span></span>,<span class="pl-s"><span class="pl-pds">&quot;</span>arch<span class="pl-pds">&quot;</span></span>:<span class="pl-s"><span class="pl-pds">&quot;</span>x64<span class="pl-pds">&quot;</span></span>})
+
+added 1001 packages <span class="pl-k">in</span> 103.903s</pre>
+</div> 
+<ul> 
+ <li>Interesing link: how to create a <a href="https://github.com/kalamuna/kss-bootstrap">styleguide for bootstrap</a> </li> 
+</ul>
+</body>
+</html>

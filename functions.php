@@ -15,6 +15,17 @@ if ( ! function_exists( 'inlineskatingcomitee93_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+function inlineskatingcomitee93_theme_setup() {
+    load_theme_textdomain( 'inlineskatingcomitee93', get_template_directory() . '/languages' );
+    
+    $locale = get_locale();
+    $locale_file = get_template_directory() . "/languages/$locale.php";
+    
+    if ( is_readable( $locale_file ) ) {
+        require_once( $locale_file );
+    }
+}
+
 function inlineskatingcomitee93_setup() {
 	/*
 	 * Make theme available for translation.
@@ -22,7 +33,7 @@ function inlineskatingcomitee93_setup() {
 	 * If you're building a theme based on WP Bootstrap Starter, use a find and replace
 	 * to change 'inlineskatingcomitee93' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'inlineskatingcomitee93', get_stylesheet_directory_uri() . '/languages' );
+    inlineskatingcomitee93_theme_setup();
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );

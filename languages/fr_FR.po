@@ -1,0 +1,120 @@
+# Copyright (C) 2018 JP Mena
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Inline Skating Comitee of Seine Saint Denis 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/"
+"inlineskatingcomitee93\n"
+"POT-Creation-Date: 2018-04-20 11:46:39+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-05-05 16:59+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+
+#: footer.php:30
+msgid "jpmena.eu"
+msgstr ""
+
+#: functions.php:47
+msgid "Primary"
+msgstr "Zone Première"
+
+#: functions.php:98
+msgid "Sidebar"
+msgstr "Barre Latérale"
+
+#: functions.php:100 functions.php:109 functions.php:118 functions.php:127
+msgid "Add widgets here."
+msgstr "Ajouter des Widgets ici"
+
+#: functions.php:107
+msgid "Footer 1"
+msgstr "Pied de page 1"
+
+#: functions.php:116
+msgid "Footer 2"
+msgstr "Pied de page 2"
+
+#: functions.php:125
+msgid "Footer 3"
+msgstr "Pied de page 3"
+
+#: functions.php:226
+msgid "To view this protected post, enter the password below:"
+msgstr "Pour voir ce post protégé, entrez le mot de passe ci dessous"
+
+#: functions.php:227
+msgid "Password:"
+msgstr "Mot de Passe:"
+
+#: functions.php:227
+msgid "Submit"
+msgstr "Envoyer"
+
+#: functions.php:238
+msgid "It appears the wp-bootstrap-navwalker.php file may be missing."
+msgstr ""
+
+#: header.php:58
+msgid "Search..."
+msgstr "Rechercher..."
+
+#: header.php:59
+msgid "Search"
+msgstr "Rechercher"
+
+#: header.php:81
+msgid ""
+"To customize the contents of this header banner and other elements of your "
+"site, go to Dashboard > Appearance > Customize"
+msgstr ""
+
+#: inc/wp-bootstrap-navwalker.php:318
+msgid "Add a menu"
+msgstr "Ajouter un menu"
+
+#: template-parts/content.php:42
+msgid "Pages:"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Inline Skating Comitee of Seine Saint Denis"
+msgstr "Le Comité de Roller de Seine Saint Denis"
+
+#. Theme URI of the plugin/theme
+msgid "https://the github url of the project"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"The best WordPress starter theme based on the most powerful frameworks in "
+"the world: \"_s\" (by Automattic, the main people behind WordPress "
+"development), Twitter Bootstrap (the most popular HTML, CSS, and JS "
+"framework for developing responsive, mobile first projects on the web) and "
+"Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for "
+"easy scalable vector graphics on websites). This theme, like WordPress, is "
+"licensed under the GPL. You can use this theme as base for your next "
+"WordPress theme project and you are allowed to remove the link at the footer "
+"or do whatever you want. Your feedback on how we can continuously improve "
+"this WordPress Starter Theme Bootstrap will be highly appreciated. Page "
+"templates includes Right-sidebar (default page template), Left-Sidebar, Full-"
+"Width, Blank with container, Blank without container Page. Other features - "
+"Currently using Bootstrap v4.0.0-beta.2 , Widgetized footer area, "
+"WooCommerce ready, Compatible with Contact Form 7, Compatible with Visual "
+"Composer, Compatible with Elementor Page Builder. This theme will be an "
+"active project which we will update from time to time. Check this page "
+"regularly for the updates."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "JP Mena"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://jpmena.eu/"
+msgstr ""
