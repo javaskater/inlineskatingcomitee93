@@ -88,5 +88,8 @@
     <?php endif; ?>
 	<div id="content" class="site-content">
 		<div class="container">
+			<nav aria-label="breadcrumb">
+            	<?php inlineskatingcomitee93_breadcrumb() ?>
+            </nav>
 			<div class="row">
                 <?php endif; ?>

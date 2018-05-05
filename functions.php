@@ -240,3 +240,37 @@ if ( ! file_exists( get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.ph
     // file exists... require it.
     require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 }
+
+function inlineskatingcomitee93_breadcrumb() {
+    global $post;
+    echo '<ol class="breadcrumb">';
+    if (!is_home()) {
+        echo '<li class="breadcrumb-item"><a href="';
+        echo home_url();
+        echo '">';
+        echo 'Home';
+        echo '</a></li>';
+        if (is_category() || is_single()) {
+            echo '<li class="breadcrumb-item">';
+            the_category('</li><li class="breadcrumb-item">');
+            if (is_single()) {
+                echo '<li class="breadcrumb-item active">';
+                the_title();
+                echo '</li>';
+            }
+        } elseif (is_page()) {
+            if($post->post_parent){
+                $fanzone_act = get_post_ancestors( $post->ID );
+                $title = get_the_title();
+                foreach ( $fanzone_act as $fanzone_inherit ) {
+                    $output .= '<li class="breadcrumb-item"><a href="'.get_permalink($fanzone_inherit).'" title="'.get_the_title($fanzone_inherit).'">'.get_the_title($fanzone_inherit).'</a></li>';
+                }
+                echo $output;
+                echo '<li class="breadcrumb-item active">'.$title.'</li>';
+            } else {
+                echo '<li class="breadcrumb-item active">'.get_the_title().'</li>';
+            }
+        }
+    }
+    echo '</ol>';
+}
