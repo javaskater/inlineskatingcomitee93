@@ -16,14 +16,14 @@ if ( ! function_exists( 'inlineskatingcomitee93_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function inlineskatingcomitee93_theme_setup() {
-    load_theme_textdomain( 'inlineskatingcomitee93', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'inlineskatingcomitee93', get_stylesheet_directory() . '/languages' );
     
-    $locale = get_locale();
-    $locale_file = get_template_directory() . "/languages/$locale.php";
+    /*$locale = get_locale();
+    $locale_file = get_stylesheet_directory() . "/languages/$locale.po";
     
     if ( is_readable( $locale_file ) ) {
         require_once( $locale_file );
-    }
+    }*/
 }
 
 function inlineskatingcomitee93_setup() {
@@ -254,8 +254,8 @@ if ( ! file_exists( get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.ph
 
 function inlineskatingcomitee93_breadcrumb() {
     global $post;
-    echo '<ol class="breadcrumb">';
     if (!is_home()) {
+        echo '<ol class="breadcrumb">';
         echo '<li class="breadcrumb-item"><a href="';
         echo home_url();
         echo '">';
@@ -282,6 +282,6 @@ function inlineskatingcomitee93_breadcrumb() {
                 echo '<li class="breadcrumb-item active">'.get_the_title().'</li>';
             }
         }
+        echo '</ol>';
     }
-    echo '</ol>';
 }
