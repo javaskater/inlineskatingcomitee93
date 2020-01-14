@@ -252,6 +252,9 @@ if ( ! file_exists( get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.ph
     require_once get_stylesheet_directory() . '/inc/wp-bootstrap-navwalker.php';
 }
 
+require get_stylesheet_directory(). '/inc/template-tags.php';
+
+
 function inlineskatingcomitee93_breadcrumb() {
     global $post;
     if (!is_home()) {

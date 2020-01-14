@@ -56,6 +56,16 @@ msgstr "Mot de Passe:"
 msgid "Submit"
 msgstr "Envoyer"
 
+#: template-tags.php: 26
+# msgctxt: "post date"
+msgid "Posted on %s"
+msgstr "Posté le %s"
+
+#: template-tags.php: 31
+# msgctxt: "post author"
+msgid "by %s"
+msgstr "par %s"
+
 #: functions.php:238
 msgid "It appears the wp-bootstrap-navwalker.php file may be missing."
 msgstr ""

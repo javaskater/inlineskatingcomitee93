@@ -23,7 +23,7 @@ const destSources = 'dist';
 const distCss = destSources +'/css';
 
 // Task for compiling sass to css into dist/css/** */
-gulp.task('sass', function () {
+const sassTask = () => {
     return gulp.src(`${srcSass}`)
         .pipe(sourcemaps.init())
         .pipe(sass({
@@ -34,7 +34,7 @@ gulp.task('sass', function () {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(distCss)); // We send the compiled source tu the navigator !!!
-});
+}
 
 
 // Move the javascript files into our /dist/js folder
@@ -42,20 +42,20 @@ const srcJs = 'app/js/**/*.js';
 const srcBtsrap = 'node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 const srcJQ = 'node_modules/jquery/dist/jquery.js';
 const distJs = destSources +'/js';
-gulp.task('js', function() {
+const jsTask = () => {
     return gulp.src([srcBtsrap, srcJQ])
         .pipe(gulp.dest(distJs)); // on fournit les nouvelles sources au navigateur !!!
-});
+};
 
 // Move the images files into our /dist/img folder
 const srcImg = 'images/*.*';
 const distImg = destSources +'/img';
-gulp.task('img', function() {
+const imgTask = () => {
     return gulp.src([srcImg])
         .pipe(gulp.dest(distImg)); // on fournit les nouvelles sources au navigateur !!!
-});
+}
 
-gulp.task('dist',['sass','js','img']);
+const distTask = gulp.series(sassTask, jsTask, imgTask)
 
 
 
@@ -63,13 +63,18 @@ gulp.task('dist',['sass','js','img']);
 
 
 
-gulp.task('serve', ['dist'], function (){
+const serveTask = gulp.series( distTask, function (){
     gulp.watch(srcSass, ['sass']);
     // Other watchers
 })
+
 
 /*
 * Defining a default task !!!
 */
 
-gulp.task('default', ['serve'])
+const defaultTask = gulp.series(serveTask)
+
+module.exports =  {dist: distTask}
+
+//export default defaultTask

@@ -6,17 +6,6 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {
-    "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
-    "popper.js": "^1.16.0"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "node node_modules/gulp-cli/bin/gulp.js"
@@ -27,12 +16,24 @@
   },
   "keywords": [
     "Bootstrap4",
-    "Wordpress"
+    "Wordpress",
+    "InlineSkating"
   ],
-  "author": "JPM",
+  "author": "JPMena",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/javaskater/inlineskatingcomitee93/issues"
   },
-  "homepage": "https://github.com/javaskater/inlineskatingcomitee93#readme"
+  "homepage": "https://github.com/javaskater/inlineskatingcomitee93#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4"
+  }
 }
